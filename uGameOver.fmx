@@ -1,0 +1,128 @@
+object GameOverFrame: TGameOverFrame
+  Size.Width = 320.000000000000000000
+  Size.Height = 480.000000000000000000
+  Size.PlatformDefault = False
+  object GameOverLayout: TLayout
+    Align = Contents
+    Size.Width = 320.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    object GameOverLBL: TLabel
+      Align = Top
+      StyledSettings = [Family]
+      Margins.Top = 50.000000000000000000
+      Position.Y = 50.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 78.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 48.000000000000000000
+      TextSettings.Font.Style = [fsBold]
+      TextSettings.FontColor = claFirebrick
+      TextSettings.HorzAlign = Center
+      Text = 'GAME OVER'
+    end
+    object GOFloat: TFloatAnimation
+      Duration = 0.500000000000000000
+      PropertyName = 'Position.Y'
+      StartValue = 0.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+    object Layout1: TLayout
+      Align = Bottom
+      Position.Y = 353.000000000000000000
+      Size.Width = 320.000000000000000000
+      Size.Height = 127.000000000000000000
+      Size.PlatformDefault = False
+      object OKBTN: TButton
+        Anchors = [akLeft, akBottom]
+        StyledSettings = [Family, FontColor]
+        Position.X = 48.000000000000000000
+        Position.Y = 54.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Ok'
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.Style = [fsBold]
+      end
+      object ReplayBTN: TButton
+        Anchors = [akRight, akBottom]
+        StyledSettings = [Family, FontColor]
+        Position.X = 176.000000000000000000
+        Position.Y = 54.000000000000000000
+        Size.Width = 106.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Replay'
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.Style = [fsBold]
+      end
+    end
+    object Rectangle3: TRectangle
+      Align = Fit
+      Fill.Color = claBurlywood
+      HitTest = False
+      Margins.Left = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 221.666656494140600000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF785425
+      Stroke.Thickness = 3.000000000000000000
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      object Label2: TLabel
+        Align = Top
+        StyledSettings = [Family, Style, FontColor]
+        Margins.Top = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 300.000000000000000000
+        Size.Height = 45.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 24.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 'SCORE'
+      end
+      object Label4: TLabel
+        Align = Top
+        StyledSettings = [Family, Style, FontColor]
+        Margins.Top = 5.000000000000000000
+        Position.Y = 108.000000000000000000
+        Size.Width = 300.000000000000000000
+        Size.Height = 45.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 24.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = 'BEST'
+      end
+      object GOScoreLBL: TLabel
+        Align = Top
+        StyledSettings = [Family, FontColor]
+        Margins.Top = 10.000000000000000000
+        Position.Y = 65.000000000000000000
+        Size.Width = 300.000000000000000000
+        Size.Height = 38.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.Style = [fsBold]
+        TextSettings.HorzAlign = Center
+        Text = '0'
+      end
+      object BestScoreLBL: TLabel
+        Align = Top
+        StyledSettings = [Family, FontColor]
+        Margins.Top = 5.000000000000000000
+        Position.Y = 158.000000000000000000
+        Size.Width = 300.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.Style = [fsBold]
+        TextSettings.HorzAlign = Center
+        Text = '0'
+      end
+    end
+  end
+end

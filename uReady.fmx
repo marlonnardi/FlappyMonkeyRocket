@@ -1,0 +1,145 @@
+object ReadyFrame: TReadyFrame
+  Size.Width = 320.000000000000000000
+  Size.Height = 480.000000000000000000
+  Size.PlatformDefault = False
+  object GetReadyLayout: TLayout
+    Align = Contents
+    Size.Width = 320.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    object Arc1: TArc
+      Anchors = []
+      HitTest = False
+      Position.X = 137.416671752929700000
+      Position.Y = 153.235443115234400000
+      RotationAngle = 180.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      EndAngle = -90.000000000000000000
+    end
+    object Arc2: TArc
+      Anchors = []
+      HitTest = False
+      Position.X = 132.083328247070300000
+      Position.Y = 168.240737915039100000
+      RotationAngle = 180.000000000000000000
+      Size.Width = 25.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      EndAngle = -90.000000000000000000
+    end
+    object GetReadyLBL: TLabel
+      Anchors = []
+      StyledSettings = [Family]
+      Position.X = -32.000000000000000000
+      Position.Y = 57.507949829101560000
+      Size.Width = 384.000000000000000000
+      Size.Height = 78.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 48.000000000000000000
+      TextSettings.Font.Style = [fsBold]
+      TextSettings.FontColor = claFirebrick
+      TextSettings.HorzAlign = Center
+      Text = 'GET READY!'
+      object FloatAnimation1: TFloatAnimation
+        Duration = 0.500000000000000000
+        PropertyName = 'Position.Y'
+        StartValue = 0.000000000000000000
+        StopValue = 0.000000000000000000
+      end
+      object GlowEffect3: TGlowEffect
+        Softness = 0.400000005960464500
+        GlowColor = claGold
+        Opacity = 1.000000000000000000
+      end
+    end
+    object Image2: TImage
+      MultiResBitmap.Height = 54
+      MultiResBitmap.Width = 76
+      MultiResBitmap = <
+        item
+          Width = 76
+          Height = 54
+          PNG = {
+            89504E470D0A1A0A0000000D494844520000004C0000003608060000006D2E7F
+            8C000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            024949444154785EED99BF4E024110C61701C527D0C467B0D7D6424B1BB522B1
+            33A1B0F619AC2D48ACA9D4C6520B5B7D0D0B137D02FF84BB93E1C600CB1066F6
+            7657EE985F98305C42081F33DFEC0D351391A39DFD0CD3E0DCBD3C06F96E2BF8
+            AC3051C1845456B06C00A65EF1D6E71C7FBAEE9D60E6C659FB06B3496E9F1F30
+            1B71BC7B80598E2F4FD39614A2820989DA92DDCB0FCCDCE85C6C603689B66400
+            E0071D0FBC2CC64975EA0339869EBC5D61C6C3AE28AA92B8F8AA38F530212A98
+            106F8241BBCD8B45C2F5603BD5C7450C719CA2131128E261EDBD43CC727A4FF7
+            98E5D89E06707CADF42D99A6A94993C424FDC4F4FB7DBC6ACCF7E7D744F8A212
+            1E062D011D960DC40B4DE905CB85F2E2222C744A0AA9D9265F74A3F007B55990
+            0E028EE927E85B30F3B22C35CDD5D5E16BDBD4EDF72EADE99B9AD381DD99D20B
+            0672D54034784410AFF482ADD4EBC368341AA6D16CE25563D6D65B13E18B601E
+            4661FB1AD7D3A8B54E911B7160793D2C322A9810154C880A2664E14CDF36F8EE
+            E60F66233AEFF9E13434D4109812CCC75A06A86F9D6336A20A82056BC9455F20
+            BAA21E2664AAE4A88DAB4B9B5287CDD3F62B66393BDB2D560BFE1754EB6B8509
+            892A1854D47848805F7B56C4442B4C880A2684B540A206C13C6C8307A836E49A
+            7EECD603A29EC3AA4A690483CA9B15310926983D11A9762C234E1E46F9938DAB
+            40D481374615511EA91EE601154C889360B637515155B4C284B04CDF867390F5
+            B58804A8411002FD9B2D002A9810154C8893877170B961E7C2F19A5068850951
+            C184A86042543011C6FC02B4000E8BEF448A970000000049454E44AE426082}
+          FileName = 'F:\Users\Benny\Desktop\Flapp\Res\FlappyBird1.png'
+        end>
+      Anchors = []
+      HitTest = False
+      Opacity = 0.750000000000000000
+      Position.X = 148.000000000000000000
+      Position.Y = 135.478256225585900000
+      Size.Width = 40.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      object MonochromeEffect1: TMonochromeEffect
+      end
+    end
+    object Rectangle2: TRectangle
+      Anchors = []
+      HitTest = False
+      Position.X = 157.916671752929700000
+      Position.Y = 233.201065063476600000
+      Size.Width = 25.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Rectangle1: TRectangle
+      Anchors = []
+      Fill.Color = claOrangered
+      HitTest = False
+      Position.X = 133.916671752929700000
+      Position.Y = 295.457672119140600000
+      Size.Width = 73.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claWhite
+      XRadius = 5.000000000000000000
+      YRadius = 5.000000000000000000
+      object Label1: TLabel
+        StyledSettings = [Family, Size]
+        Position.X = -8.000000000000000000
+        Position.Y = 3.000000000000000000
+        Size.Width = 89.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Style = [fsBold]
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = 'TAP'
+      end
+    end
+    object Pie1: TPie
+      Anchors = []
+      HitTest = False
+      Position.X = 133.833328247070300000
+      Position.Y = 183.952377319335900000
+      RotationAngle = 135.000000000000000000
+      Size.Width = 74.000000000000000000
+      Size.Height = 74.000000000000000000
+      Size.PlatformDefault = False
+      EndAngle = -90.000000000000000000
+    end
+  end
+end

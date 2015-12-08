@@ -1,3 +1,6 @@
 *.tvsconfig
 *.identcache
 *.local
+Android/
+*.stat
+*.res

@@ -1,4 +1,4 @@
-program BirdsFlappy;
+program FlappyBirdFMX;
 
 uses
   System.StartUpCopy,
@@ -17,14 +17,16 @@ uses
 
 var Controller: IAppController;
 begin
- // ReportMemoryLeaksOnShutdown := True;
+  {$IFDEF DEBUG}
+  ReportMemoryLeaksOnShutdown := True;
+  {$ENDIF}
 
   Controller:= TAppController.Create;
 
   TGameForm.OnCreateGUI:= procedure(const AGUI: IAppGUI)
-   begin
+  begin
     Controller.RegisterGUI(AGUI);
-   end;
+  end;
 
   Application.Initialize;
   Application.FormFactor.Orientations := [TFormOrientation.Portrait];

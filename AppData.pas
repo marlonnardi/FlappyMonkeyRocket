@@ -26,10 +26,13 @@ implementation
 
 constructor TAppData.Create;
 var IniFile: TIniFile;
+FGetDocumentsPath : string;
+FPathDelim : string;
 begin
  FScore:= 0;
  FHighscore:= 0;
-
+ FGetDocumentsPath := TPath.GetHomePath;
+ FPathDelim := System.SysUtils.PathDelim;
  FFileName:= TPath.GetDocumentsPath + System.SysUtils.PathDelim + 'Scores.dat';
  try
   IniFile:= TIniFile.Create(FFileName);

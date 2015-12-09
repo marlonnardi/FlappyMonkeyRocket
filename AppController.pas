@@ -4,8 +4,8 @@ interface
 
 uses
   SysUtils, Classes, Math,
-  System.Generics.Collections, SyncObjs, System.Types, FMX.Types,
-  AppData, Interfaces.Controller.GUI;
+  System.Generics.Collections, SyncObjs, System.Types, FMX.Types, FMX.Media,
+  AppData, Interfaces.Controller.GUI, IOUtils;
 
 type
   TAddPipe = procedure(AYOffset: Double; Bottom: Boolean) of object ;
@@ -31,6 +31,7 @@ type
   FBird: TBird;
   FTimer: TTimer; // quick and dirty
   FUpdater: TCalculator;
+  FSomBaterAsas : TMediaPlayer;
   procedure RegisterGUI(const AGUI: IAppGUI);
   procedure StartGame;
   procedure StopGame;
@@ -89,6 +90,13 @@ begin
  FTimer.Interval:=33;
  FTimer.Enabled:= false;
  FTimer.OnTimer:= MainLoop;
+
+ {Criando os Sons}
+ {Bater de asas}
+ FSomBaterAsas := TMediaPlayer.Create(nil);
+ FSomBaterAsas.FileName := TPath.Combine(TPath.GetDocumentsPath, 'sfx_wing.ogg');
+
+
 end;
 
 procedure TAppController.StartGame;
@@ -140,9 +148,10 @@ end;
 
 procedure TAppController.Tapped;
 begin
- Mutex.Enter;
- BirdUp:= True;
- Mutex.Leave;
+  Mutex.Enter;
+  BirdUp:= True;
+  FSomBaterAsas.Play;
+  Mutex.Leave;
 end;
 
 procedure TAppController.RemovePipes;

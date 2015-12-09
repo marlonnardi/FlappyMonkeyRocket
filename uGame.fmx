@@ -318,7 +318,7 @@ object GameForm: TGameForm
   object ScoreLBL: TLabel
     Align = Top
     StyledSettings = []
-    Margins.Top = 100.000000000000000000
+    Margins.Top = 60.000000000000000000
     Position.X = -64.000000000000000000
     Position.Y = 100.000000000000000000
     Size.Width = 384.000000000000000000
@@ -536,15 +536,29 @@ object GameForm: TGameForm
     OnClick = GetReadyLayoutClick
     inherited GetReadyLayout: TLayout
       Size.Height = 548.000000000000000000
+      inherited Arc1: TArc
+        Position.Y = 180.000000000000000000
+      end
+      inherited Arc2: TArc
+        Position.Y = 200.000000000000000000
+      end
       inherited Image2: TImage
         MultiResBitmap.Height = 54
         MultiResBitmap.Width = 76
+        Position.X = 160.000000000000000000
+        Position.Y = 150.000000000000000000
       end
       inherited Rectangle2: TRectangle
-        Position.Y = 233.201049804687500000
+        Align = Center
+        Margins.Top = -20.000000000000000000
+      end
+      inherited Rectangle1: TRectangle
+        Align = Center
+        Margins.Top = 80.000000000000000000
       end
       inherited Pie1: TPie
-        Position.Y = 183.952392578125000000
+        Align = Center
+        Margins.Top = -100.000000000000000000
       end
     end
   end

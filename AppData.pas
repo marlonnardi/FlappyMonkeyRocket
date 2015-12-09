@@ -25,29 +25,29 @@ implementation
 { TAppData }
 
 constructor TAppData.Create;
-var IniFile: TMemIniFile;
+var IniFile: TIniFile;
 begin
  FScore:= 0;
  FHighscore:= 0;
 
  FFileName:= TPath.GetDocumentsPath + System.SysUtils.PathDelim + 'Scores.dat';
  try
-  IniFile:= TMemIniFile.Create(FFileName);
-  FHighscore:= IniFile.ReadInteger('Settings','Highscore',0);
+  IniFile:= TIniFile.Create(FFileName);
+  FHighscore:= IniFile.ReadInteger('Settings','Best',0);
   IniFile.Free;
  except on E: Exception do;
  end;
 end;
 
 procedure TAppData.SaveScore(AScore: Integer);
-var IniFile: TMemIniFile;
+var IniFile: TIniFile;
 begin
  FScore:= AScore;
- if FScore > FHighscore then
+ if FScore >= FHighscore then
  begin
   FHighscore:= FScore;
   try
-   IniFile:= TMemIniFile.Create(FFileName);
+   IniFile:= TIniFile.Create(FFileName);
    IniFile.WriteInteger('Settings','Best',FHighscore);
    IniFile.Free;
   except on E: Exception do;
@@ -56,14 +56,14 @@ begin
 end;
 
 procedure TAppData.IncScore;
-var IniFile: TMemIniFile;
+var IniFile: TIniFile;
 begin
  Inc(FScore);
  if FScore > FHighscore then
  begin
   FHighscore:= FScore;
   try
-   IniFile:= TMemIniFile.Create(FFileName);
+   IniFile:= TIniFile.Create(FFileName);
    IniFile.WriteInteger('Settings','Best',FHighscore);
    IniFile.Free;
   except on E: Exception do;

@@ -30,4 +30,6 @@ implementation
 
 {$R *.fmx}
 
+uses uDmStyle;
+
 end.

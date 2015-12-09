@@ -1,4 +1,4 @@
-program FlappyBird;
+program BirdsFlappy;
 
 uses
   System.StartUpCopy,
@@ -10,7 +10,8 @@ uses
   Interfaces.Controller.GUI in 'Interfaces.Controller.GUI.pas',
   AppData in 'AppData.pas',
   uGameOver in 'uGameOver.pas' {GameOverFrame: TFrame},
-  uReady in 'uReady.pas' {ReadyFrame: TFrame};
+  uReady in 'uReady.pas' {ReadyFrame: TFrame},
+  uDmStyle in 'uDmStyle.pas' {dmStyle: TDataModule};
 
 {$R *.res}
 
@@ -27,6 +28,7 @@ begin
 
   Application.Initialize;
   Application.FormFactor.Orientations := [TFormOrientation.Portrait];
+  Application.CreateForm(TdmStyle, dmStyle);
   Application.CreateForm(TMenuForm, MenuForm);
   Application.CreateForm(TGameForm, GameForm);
   Application.Run;

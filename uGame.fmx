@@ -7,13 +7,14 @@ object GameForm: TGameForm
   Fill.Color = xFF5AA6FF
   Fill.Kind = Solid
   Quality = HighPerformance
+  StyleBook = dmStyle.StyleBookW
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
   OnMouseDown = FormMouseDown
   OnHide = FormHide
-  DesignerMasterStyle = 2
+  DesignerMasterStyle = 3
   object BackGroundImage: TImage
     MultiResBitmap.Height = 1138
     MultiResBitmap.Width = 640
@@ -316,14 +317,15 @@ object GameForm: TGameForm
   end
   object ScoreLBL: TLabel
     Align = Top
-    StyledSettings = [Family]
+    StyledSettings = []
     Margins.Top = 100.000000000000000000
     Position.X = -64.000000000000000000
     Position.Y = 100.000000000000000000
     Size.Width = 384.000000000000000000
-    Size.Height = 23.000000000000000000
+    Size.Height = 44.000000000000000000
     Size.PlatformDefault = False
-    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.Font.Family = 'Showcard Gothic'
+    TextSettings.Font.Size = 30.000000000000000000
     TextSettings.Font.Style = [fsBold]
     TextSettings.FontColor = claWhite
     TextSettings.HorzAlign = Center
@@ -563,17 +565,23 @@ object GameForm: TGameForm
         end
       end
       inherited Rectangle3: TRectangle
+        Size.Height = 222.000000000000000000
+        inherited Label2: TLabel
+          Margins.Top = 15.000000000000000000
+          Position.Y = 15.000000000000000000
+          Size.Height = 40.000000000000000000
+        end
         inherited Label4: TLabel
-          Position.Y = 120.000000000000000000
+          Position.Y = 116.000000000000000000
         end
         inherited GOScoreLBL: TLabel
-          Size.Height = 50.000000000000000000
+          Size.Height = 46.000000000000000000
           TextSettings.Font.Size = 30.000000000000000000
         end
         inherited BestScoreLBL: TLabel
           StyledSettings = [Family]
-          Position.Y = 170.000000000000000000
-          Size.Height = 50.000000000000000000
+          Position.Y = 166.000000000000000000
+          Size.Height = 42.000000000000000000
           TextSettings.Font.Size = 28.000000000000000000
         end
       end

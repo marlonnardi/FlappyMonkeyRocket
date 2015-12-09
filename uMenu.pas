@@ -14,7 +14,6 @@ type
     Image1: TImage;
     GroundA: TImage;
     Ground: TRectangle;
-    StyleBookW: TStyleBook;
     Image2: TImage;
     Rectangle1: TRectangle;
     LogoLBL: TLabel;
@@ -36,7 +35,7 @@ implementation
 
 {$R *.fmx}
 
-uses uGame;
+uses uGame, uDmStyle;
 
 
 procedure TMenuForm.FormCreate(Sender: TObject);

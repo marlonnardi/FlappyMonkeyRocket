@@ -131,6 +131,9 @@ end;
 
 procedure TAppController.GameOver;
 begin
+ if FData.GetScore >= FData.GetHighscore then
+  FData.SaveScore(FData.GetHighscore);
+
  StopGame;
  FGUI.GameOver(FData.GetScore, FData.GetHighscore);
 end;
@@ -138,7 +141,7 @@ end;
 procedure TAppController.Tapped;
 begin
  Mutex.Enter;
- BirdUp:= true;
+ BirdUp:= True;
  Mutex.Leave;
 end;
 

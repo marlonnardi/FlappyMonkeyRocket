@@ -69,7 +69,7 @@ implementation
 
 {$R *.fmx}
 
-uses uMenu;
+uses uMenu, uDmStyle;
 
 // ------------------------- INTERFACE ------------------------- //
 
@@ -163,18 +163,18 @@ end;
 
 procedure TGameForm.TimerTimer(Sender: TObject);
 begin
-if MyReadyFrame.Visible OR MyGameOverFrame.Visible then
- Exit;
+  if MyReadyFrame.Visible OR MyGameOverFrame.Visible then
+    Exit;
 
-if GroundLayout.Tag=0 then
+  if GroundLayout.Tag=0 then
   begin
-   GroundB.Opacity := 1;
-   GroundLayout.Tag := 1;
+    GroundB.Opacity := 1;
+    GroundLayout.Tag := 1;
   end
   else
   begin
-   GroundB.Opacity := 0;
-   GroundLayout.Tag := 0;
+    GroundB.Opacity := 0;
+    GroundLayout.Tag := 0;
   end;
 end;
 
@@ -219,10 +219,10 @@ end;
 
 procedure TGameForm.OKBTNClick(Sender: TObject);
 begin
- MyGameOverFrame.Position.Y := GameForm.Height;
- MyGameOverFrame.Visible := False;
- GameForm.Close;
- MenuForm.Show;
+  MyGameOverFrame.Position.Y := GameForm.Height;
+  MyGameOverFrame.Visible := False;
+  GameForm.Close;
+  MenuForm.Show;
 end;
 
 procedure TGameForm.Run;

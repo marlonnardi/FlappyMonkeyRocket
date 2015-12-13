@@ -43,7 +43,7 @@ begin
  {$IFDEF MSWINDOWS}
  BorderStyle:= TFmxFormBorderStyle.bsSizeable;
  {$ELSE}
- //BorderStyle:= TFmxFormBorderStyle.None;
+ //BorderStyle:= TFmxFormBorderStyle.None; {BUG}
  {$ENDIF}
 end;
 

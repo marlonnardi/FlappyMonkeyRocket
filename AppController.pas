@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Classes, Math,
   System.Generics.Collections, SyncObjs, System.Types, FMX.Types, FMX.Media,
-  AppData, Interfaces.Controller.GUI, IOUtils;
+  AppData, Interfaces.Controller.GUI, IOUtils, uMusic;
 
 type
   TAddPipe = procedure(AYOffset: Double; Bottom: Boolean) of object ;
@@ -31,7 +31,6 @@ type
   FBird: TBird;
   FTimer: TTimer; // quick and dirty
   FUpdater: TCalculator;
-  FSomBaterAsas : TMediaPlayer;
   procedure RegisterGUI(const AGUI: IAppGUI);
   procedure StartGame;
   procedure StopGame;
@@ -53,6 +52,7 @@ type
   procedure InitPipe;
   procedure InitBird;
  public
+  destructor Destroy; override;
  end;
 
 const
@@ -71,31 +71,26 @@ implementation
 
 { TAppController }
 
+
 procedure TAppController.RegisterGUI(const AGUI: IAppGUI);
 begin
- FGUI:= AGUI;
- FGUI.RegisterController(Self);
- FData:= TAppData.Create;
- Mutex:= TCriticalSection.Create;
- FPipes:= TObjectList<TPipe>.Create;
+  FGUI:= AGUI;
+  FGUI.RegisterController(Self);
+  FData:= TAppData.Create;
+  Mutex:= TCriticalSection.Create;
+  FPipes:= TObjectList<TPipe>.Create;
 
- InitPipe;
- InitBird;
+  InitPipe;
+  InitBird;
 
- Randomize;
+  Randomize;
 
- FUpdater := TCalculator.Create;
- FUpdater.Start;
- FTimer:= TTimer.Create(nil);
- FTimer.Interval:=33;
- FTimer.Enabled:= false;
- FTimer.OnTimer:= MainLoop;
-
- {Criando os Sons}
- {Bater de asas}
- FSomBaterAsas := TMediaPlayer.Create(nil);
- FSomBaterAsas.FileName := TPath.Combine(TPath.GetDocumentsPath, 'sfx_wing.ogg');
-
+  FUpdater := TCalculator.Create;
+  FUpdater.Start;
+  FTimer:= TTimer.Create(nil);
+  FTimer.Interval:=33;
+  FTimer.Enabled:= false;
+  FTimer.OnTimer:= MainLoop;
 
 end;
 
@@ -114,7 +109,7 @@ begin
  //FUpdater.Terminate;
  //FUpdater.WaitFor;
  //FUpdater.DisposeOf;
- FTimer.Enabled := false;
+ FTimer.Enabled := False;
 end;
 
 procedure TAppController.Replay;
@@ -127,10 +122,10 @@ begin
  RemovePipes;
  BirdYPos:= TBird.DefPosition.Y;
  BirdAngle:= DEF_BIRD_ANGLE;
- BirdUp:= false;
- Flap:= false;
+ BirdUp:= False;
+ Flap:= False;
  GamePanelSize:= FGUI.GetGamePanelSize;
- SetBird(TBird.DefPosition,DEF_BIRD_ANGLE,false);
+ SetBird(TBird.DefPosition,DEF_BIRD_ANGLE,False);
 
  FData.ResetScore;
  FGUI.SetScore(FData.GetScore);
@@ -141,16 +136,17 @@ procedure TAppController.GameOver;
 begin
  if FData.GetScore >= FData.GetHighscore then
   FData.SaveScore(FData.GetHighscore);
-
+ TMusic.Create(TSom.Hit);
  StopGame;
  FGUI.GameOver(FData.GetScore, FData.GetHighscore);
+ TMusic.Create(TSom.Die);
 end;
 
 procedure TAppController.Tapped;
 begin
   Mutex.Enter;
   BirdUp:= True;
-  FSomBaterAsas.Play;
+  TMusic.Create(TSom.Wing);
   Mutex.Leave;
 end;
 
@@ -164,8 +160,9 @@ end;
 
 procedure TAppController.IncScore;
 begin
- FData.IncScore;
- FGUI.SetScore(FData.GetScore);
+  TMusic.Create(TSom.Pointer);
+  FData.IncScore;
+  FGUI.SetScore(FData.GetScore);
 end;
 
 procedure TAppController.SetBird(APosition: TPointF; AAngle: Double; Flap: Boolean);
@@ -304,6 +301,26 @@ begin
 end;
 
 
+destructor TAppController.Destroy;
+begin
+  {$IFDEF MSWINDOWS}
+  FreeAndNil(FPipes);
+  FreeAndNil(FTimer);
+  FreeAndNil(FUpdater);
+  FreeAndNil(FData);
+  FreeAndNil(FBird);
+  FreeAndNil(Mutex);
+  {$ELSE}
+  FPipes.DisposeOf;
+  FTimer.DisposeOf;
+  FUpdater.DisposeOf;
+  FData.DisposeOf;
+  FBird.DisposeOf;
+  Mutex.DisposeOf;
+  {$ENDIF}
+  inherited;
+end;
+
 { TUpdater }
 
 constructor TCalculator.Create;
@@ -322,7 +339,7 @@ const BIRD_UP_HEIGHT = 42;
       MAX_GAP_SIZE = 170;
 var BirdUpCount: Integer;
     IsBirdUp: Boolean;
-    PipeRange,GapSize: Single;
+    GapSize: Single;
     YOff,YMinOff,YMaxOff: Integer;
 begin
  inherited;

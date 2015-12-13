@@ -11,15 +11,14 @@ uses
   AppData in 'AppData.pas',
   uGameOver in 'uGameOver.pas' {GameOverFrame: TFrame},
   uReady in 'uReady.pas' {ReadyFrame: TFrame},
-  uDmStyle in 'uDmStyle.pas' {dmStyle: TDataModule};
+  uDmStyle in 'uDmStyle.pas' {dmStyle: TDataModule},
+  uMusic in 'uMusic.pas';
 
 {$R *.res}
 
 var Controller: IAppController;
 begin
-  {$IFDEF DEBUG}
   ReportMemoryLeaksOnShutdown := True;
-  {$ENDIF}
 
   Controller:= TAppController.Create;
 

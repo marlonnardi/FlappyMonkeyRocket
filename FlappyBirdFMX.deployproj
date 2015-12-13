@@ -78,19 +78,20 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="iOSDevice32\Release\FlappyBirdFMX" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteName>FlappyBirdFMX</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_152x152.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_152x152.png</RemoteName>
             <DeployClass>iPad_AppIcon152</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_768x1024.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
-            <RemoteName>Default-Portrait~ipad.png</RemoteName>
-            <DeployClass>iPad_Launch768x1024</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -101,6 +102,15 @@
             <RemoteName>FlappyFiremonkey</RemoteName>
             <DeployClass>ProjectiOSDeviceDebug</DeployClass>
             <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_768x1024.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteName>Default-Portrait~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch768x1024</DeployClass>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -185,16 +195,6 @@
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="iOSDevice32\Release\FlappyBirdFMX" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
-            <RemoteName>FlappyBirdFMX</RemoteName>
-            <DeployClass>ProjectOutput</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-            <Required>True</Required>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_114x114.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
@@ -345,6 +345,15 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Sons\sfx_die.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
+            <RemoteName>sfx_die.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(NDKBasePath)\prebuilt\android-arm\gdbserver\gdbserver" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyBirdFMX\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>gdbserver</RemoteName>
@@ -371,16 +380,6 @@
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Android\Release\libFlappyBirdFMX.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libFlappyBirdFMX.so</RemoteName>
-            <DeployClass>ProjectOutput</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-            <Required>True</Required>
         </DeployFile>
         <DeployFile Include="Android\Debug\AndroidManifest.xml" Condition="'$(Config)'=='Debug'">
             <RemoteDir>FlappyBirdFMX\</RemoteDir>
@@ -427,6 +426,24 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyBirdFMX\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Sons\sfx_point.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
+            <RemoteName>sfx_point.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="Android\Debug\libFlappyBirdFMX.so" Condition="'$(Config)'=='Debug'">
             <RemoteDir>FlappyBirdFMX\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>libFlappyBirdFMX.so</RemoteName>
@@ -436,15 +453,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
             <Required>True</Required>
-        </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-xhdpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon96</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="c:\program files (x86)\embarcadero\rad studio\12.0\lib\android\debug\classes.dex" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyBirdFMX\classes\</RemoteDir>
@@ -518,6 +526,16 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Android\Release\libFlappyBirdFMX.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyBirdFMX\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libFlappyBirdFMX.so</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\armeabi\libnative-activity.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyBirdFMX\library\lib\armeabi\</RemoteDir>
             <RemoteName>libFlappyBird.so</RemoteName>
@@ -559,6 +577,15 @@
             <RemoteName>libBirdsFlappy.so</RemoteName>
             <DeployClass>AndroidLibnativeMipsFile</DeployClass>
             <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Sons\sfx_wing.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
+            <RemoteName>sfx_wing.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -635,15 +662,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Sons\sfx_wing.ogg" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\</RemoteDir>
-            <RemoteName>sfx_wing.ogg</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>FlappyBirdFMX\res\drawable-normal\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
@@ -685,6 +703,15 @@
             <RemoteName>AndroidManifest.xml</RemoteName>
             <DeployClass>ProjectAndroidManifest</DeployClass>
             <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Sons\sfx_hit.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
+            <RemoteName>sfx_hit.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>

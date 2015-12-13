@@ -1787,7 +1787,7 @@ object MenuForm: TMenuForm
     TextSettings.HorzAlign = Center
     Text = 'Birds Flappy'
     object GlowEffect3: TGlowEffect
-      Softness = 0.400000005960464500
+      Softness = 0.400000005960464400
       GlowColor = claDarkorange
       Opacity = 1.000000000000000000
     end

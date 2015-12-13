@@ -332,7 +332,7 @@ object GameForm: TGameForm
     Text = '0'
     Visible = False
     object GlowEffect1: TGlowEffect
-      Softness = 0.400000005960464500
+      Softness = 1.000000000000000000
       GlowColor = claBlack
       Opacity = 1.000000000000000000
     end
@@ -572,6 +572,7 @@ object GameForm: TGameForm
       inherited Layout1: TLayout
         Position.Y = 421.000000000000000000
         inherited OKBTN: TButton
+          Position.X = 40.000000000000000000
           OnClick = OKBTNClick
         end
         inherited ReplayBTN: TButton
@@ -580,6 +581,7 @@ object GameForm: TGameForm
       end
       inherited Rectangle3: TRectangle
         Size.Height = 222.000000000000000000
+        Stroke.Color = claChocolate
         inherited Label2: TLabel
           Margins.Top = 15.000000000000000000
           Position.Y = 15.000000000000000000
@@ -604,8 +606,8 @@ object GameForm: TGameForm
   object Timer: TTimer
     Interval = 66
     OnTimer = TimerTimer
-    Left = 24
-    Top = 184
+    Left = 265
+    Top = 176
   end
   object GroundLayout: TLayout
     Align = Bottom

@@ -105,11 +105,12 @@ end;
 
 procedure TGameForm.GameOver(AScore, ABestScore: Integer);
 begin
+ Sleep(1000);
  MyGameOverFrame.GOScoreLBL.Text:= IntToStr(AScore);
  MyGameOverFrame.BestScoreLbl.Text:= IntToStr(ABestScore);
  MyGameOverFrame.BringToFront;
- MyGameOverFrame.Visible:= true;
- ScoreLBL.Visible:= false;
+ MyGameOverFrame.Visible:= True;
+ ScoreLBL.Visible:= False;
  MyGameOverFrame.GOFloat.Enabled := True;
 end;
 
@@ -166,7 +167,7 @@ begin
   if MyReadyFrame.Visible OR MyGameOverFrame.Visible then
     Exit;
 
-  if GroundLayout.Tag=0 then
+  if GroundLayout.Tag = 0 then
   begin
     GroundB.Opacity := 1;
     GroundLayout.Tag := 1;
@@ -235,4 +236,3 @@ end;
 
 
 end.
-

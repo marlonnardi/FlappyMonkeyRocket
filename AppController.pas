@@ -9,6 +9,7 @@ uses
 
 type
   TAddPipe = procedure(AYOffset: Double; Bottom: Boolean) of object ;
+
   TCalculator = class(TThread)
   private
    FGameTicker: Integer;
@@ -91,7 +92,6 @@ begin
   FTimer.Interval:=33;
   FTimer.Enabled:= false;
   FTimer.OnTimer:= MainLoop;
-
 end;
 
 procedure TAppController.StartGame;

@@ -10,16 +10,20 @@ uses
 type
   TGameOverFrame = class(TFrame)
     GameOverLayout: TLayout;
-    GameOverLBL: TLabel;
-    GOFloat: TFloatAnimation;
-    Layout1: TLayout;
+    layBotoes: TLayout;
     OKBTN: TButton;
     ReplayBTN: TButton;
-    Rectangle3: TRectangle;
-    Label2: TLabel;
-    Label4: TLabel;
-    GOScoreLBL: TLabel;
+    layGameTop: TLayout;
+    GameOverLBL: TLabel;
+    GOFloat: TFloatAnimation;
+    RectangleScore: TRectangle;
+    RectangleTotal: TRectangle;
+    lbl1: TLabel;
+    lbl2: TLabel;
     BestScoreLBL: TLabel;
+    GOScoreLBL: TLabel;
+    RectangleMeda: TRectangle;
+    lbl3: TLabel;
   private
     { Private declarations }
   public

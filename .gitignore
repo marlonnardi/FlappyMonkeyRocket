@@ -6,3 +6,4 @@ Android/
 *.res
 __history/
 *.dcu
+__recovery/

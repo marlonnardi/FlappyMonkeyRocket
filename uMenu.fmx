@@ -1754,6 +1754,27 @@ object MenuForm: TMenuForm
     Size.Height = 95.000000000000000000
     Size.PlatformDefault = False
     Stroke.Kind = None
+    object lblPropaganda: TLabel
+      Align = Left
+      AutoSize = True
+      Size.Width = 81.000000000000000000
+      Size.Height = 95.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxitemdetaillabel'
+      TextSettings.WordWrap = False
+      Text = 'Propaganda'
+    end
+    object swtchPropaganda: TSwitch
+      Align = Left
+      IsChecked = False
+      Position.X = 81.000000000000000000
+      Position.Y = 34.000000000000000000
+      Size.Width = 76.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'switchstyle'
+      TabOrder = 1
+    end
   end
   object PlayBTN: TButton
     Align = Bottom
@@ -1787,7 +1808,7 @@ object MenuForm: TMenuForm
     TextSettings.HorzAlign = Center
     Text = 'Birds Flappy'
     object GlowEffect3: TGlowEffect
-      Softness = 0.400000005960464400
+      Softness = 0.400000005960464500
       GlowColor = claDarkorange
       Opacity = 1.000000000000000000
     end

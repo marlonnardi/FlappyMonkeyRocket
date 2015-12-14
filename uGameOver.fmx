@@ -3,10 +3,9 @@ object GameOverFrame: TGameOverFrame
   Size.Height = 536.000000000000000000
   Size.PlatformDefault = False
   object GameOverLayout: TLayout
-    Align = Contents
-    Margins.Top = 50.000000000000000000
+    Align = Client
     Size.Width = 330.000000000000000000
-    Size.Height = 486.000000000000000000
+    Size.Height = 391.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
     object layGameTop: TLayout
@@ -18,6 +17,7 @@ object GameOverFrame: TGameOverFrame
       object GameOverLBL: TLabel
         Align = Bottom
         StyledSettings = [Family]
+        Margins.Top = 20.000000000000000000
         Position.Y = 5.000000000000000000
         Size.Width = 330.000000000000000000
         Size.Height = 71.000000000000000000
@@ -181,5 +181,9 @@ object GameOverFrame: TGameOverFrame
       TextSettings.Font.Size = 18.000000000000000000
       TextSettings.Font.Style = [fsBold]
     end
+  end
+  object BannerAd1: TBannerAd
+    AdSize = Small
+    Align = MostTop
   end
 end

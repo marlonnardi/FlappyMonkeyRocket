@@ -20,6 +20,8 @@ type
     GlowEffect3: TGlowEffect;
     FMonkeyA: TImage;
     FloatAnimation1: TFloatAnimation;
+    swtchPropaganda: TSwitch;
+    lblPropaganda: TLabel;
     procedure PlayBTNClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private

@@ -37,7 +37,7 @@ implementation
 procedure TReadyFrame.BannerAd1DidFail(Sender: TObject; const Error: string);
 begin
   {$IFDEF DEBUG}
-  ShowMessage(Error);
+  //ShowMessage(Error);
   {$ENDIF}
 end;
 

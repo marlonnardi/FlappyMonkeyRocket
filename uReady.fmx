@@ -3,15 +3,15 @@ object ReadyFrame: TReadyFrame
   Size.Height = 480.000000000000000000
   Size.PlatformDefault = False
   object GetReadyLayout: TLayout
-    Align = Contents
+    Align = Client
     Size.Width = 320.000000000000000000
-    Size.Height = 480.000000000000000000
+    Size.Height = 430.000000000000000000
     Size.PlatformDefault = False
     object Arc1: TArc
       Anchors = []
       HitTest = False
       Position.X = 137.416671752929700000
-      Position.Y = 153.235443115234400000
+      Position.Y = 135.554672241210900000
       RotationAngle = 180.000000000000000000
       Size.Width = 41.000000000000000000
       Size.Height = 33.000000000000000000
@@ -22,7 +22,7 @@ object ReadyFrame: TReadyFrame
       Anchors = []
       HitTest = False
       Position.X = 132.083328247070300000
-      Position.Y = 168.240737915039100000
+      Position.Y = 149.413574218750000000
       RotationAngle = 180.000000000000000000
       Size.Width = 25.000000000000000000
       Size.Height = 25.000000000000000000
@@ -33,7 +33,7 @@ object ReadyFrame: TReadyFrame
       Anchors = []
       StyledSettings = [Family]
       Position.X = -32.000000000000000000
-      Position.Y = 57.507949829101560000
+      Position.Y = 47.455032348632810000
       Size.Width = 384.000000000000000000
       Size.Height = 78.000000000000000000
       Size.PlatformDefault = False
@@ -89,7 +89,7 @@ object ReadyFrame: TReadyFrame
       HitTest = False
       Opacity = 0.750000000000000000
       Position.X = 148.000000000000000000
-      Position.Y = 135.478256225585900000
+      Position.Y = 119.282600402832000000
       Size.Width = 40.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
@@ -100,7 +100,7 @@ object ReadyFrame: TReadyFrame
       Anchors = []
       HitTest = False
       Position.X = 157.916671752929700000
-      Position.Y = 233.201065063476600000
+      Position.Y = 206.305114746093800000
       Size.Width = 25.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
@@ -110,7 +110,7 @@ object ReadyFrame: TReadyFrame
       Fill.Color = claOrangered
       HitTest = False
       Position.X = 133.916671752929700000
-      Position.Y = 295.457672119140600000
+      Position.Y = 262.962066650390600000
       Size.Width = 73.000000000000000000
       Size.Height = 33.000000000000000000
       Size.PlatformDefault = False
@@ -133,17 +133,18 @@ object ReadyFrame: TReadyFrame
     object Pie1: TPie
       Anchors = []
       HitTest = False
-      Position.X = 133.833328247070300000
-      Position.Y = 183.952377319335900000
+      Position.X = 134.000000000000000000
+      Position.Y = 153.000000000000000000
       RotationAngle = 135.000000000000000000
       Size.Width = 74.000000000000000000
       Size.Height = 74.000000000000000000
       Size.PlatformDefault = False
       EndAngle = -90.000000000000000000
     end
-    object BannerAd1: TBannerAd
-      Align = MostTop
-      OnDidFail = BannerAd1DidFail
-    end
+  end
+  object BannerAd1: TBannerAd
+    AdSize = Small
+    Align = MostTop
+    OnDidFail = BannerAd1DidFail
   end
 end

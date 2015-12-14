@@ -62,6 +62,7 @@ type
     class property OnCreateGUI: TOnCreateGUI read FOnCreateGUI write FOnCreateGUI;
 
     procedure Propaganda(Banner : TBannerAd; ID : string);
+    procedure PropagandaEsconde(Banner : TBannerAd);
   end;
 
 var
@@ -107,7 +108,8 @@ end;
 
 procedure TGameForm.GameOver(AScore, ABestScore: Integer);
 begin
-  Sleep(1000);
+  Propaganda(MyGameOverFrame.BannerAd1, 'ca-app-pub-4608094404416880/8453766253');
+
   MyGameOverFrame.GOScoreLBL.Text:= IntToStr(AScore);
   MyGameOverFrame.BestScoreLbl.Text:= IntToStr(ABestScore);
   MyGameOverFrame.BringToFront;
@@ -152,6 +154,8 @@ procedure TGameForm.MyGameOverFrameOKBTNClick(Sender: TObject);
 begin
   MyGameOverFrame.Position.Y := GameForm.Height;
   MyGameOverFrame.Visible := False;
+  PropagandaEsconde(MyGameOverFrame.BannerAd1);
+
   GameForm.Close;
   MenuForm.Show;
 end;
@@ -160,7 +164,7 @@ procedure TGameForm.MyGameOverFrameReplayBTNClick(Sender: TObject);
 begin
   MyGameOverFrame.Position.Y := GameForm.Height;
   MyGameOverFrame.Visible:= False;
-
+  PropagandaEsconde(MyGameOverFrame.BannerAd1);
   Propaganda(MyReadyFrame.BannerAd1, 'ca-app-pub-4608094404416880/8453766253');
 
   MyReadyFrame.Visible:= True;
@@ -176,9 +180,16 @@ begin
     Banner.TestMode := True;
     {$ENDIF}
     Banner.AdUnitID := ID;
+
   end;
   Banner.LoadAd;
   Banner.Visible := True;
+end;
+
+procedure TGameForm.PropagandaEsconde(Banner: TBannerAd);
+begin
+  if Banner.Visible then
+    Banner.Visible  := False;
 end;
 
 procedure TGameForm.SetBird(ABird: TBird);
@@ -235,25 +246,26 @@ end;
 procedure TGameForm.FormMouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Single);
 begin
- FController.Tapped;
+  FController.Tapped;
 end;
 
 procedure TGameForm.GetReadyLayoutClick(Sender: TObject);
 begin
- MyReadyFRame.Visible:= False;
- MyReadyFrame.BannerAd1.Visible := False;
- ScoreLBL.Visible:= True;
- FController.StartGame;
+  MyReadyFRame.Visible:= False;
+  PropagandaEsconde(MyReadyFrame.BannerAd1);
+  ScoreLBL.Visible:= True;
+  FController.StartGame;
 end;
 
 procedure TGameForm.Run;
 begin
- FController.Replay;
- MyGameOverFrame.Visible:= False;
+  FController.Replay;
+  MyGameOverFrame.Visible:= False;
+  PropagandaEsconde(MyGameOverFrame.BannerAd1);
 
- Propaganda(MyReadyFrame.BannerAd1, 'ca-app-pub-4608094404416880/8453766253');
+  Propaganda(MyReadyFrame.BannerAd1, 'ca-app-pub-4608094404416880/8453766253');
 
- MyReadyFrame.Visible:= True;
+  MyReadyFrame.Visible:= True;
 end;
 
 end.

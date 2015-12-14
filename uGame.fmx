@@ -535,18 +535,18 @@ object GameForm: TGameForm
     Size.PlatformDefault = False
     OnClick = GetReadyLayoutClick
     inherited GetReadyLayout: TLayout
-      Size.Height = 548.000000000000000000
+      Size.Height = 498.000000000000000000
       inherited Arc1: TArc
-        Position.Y = 180.000000000000000000
+        Position.Y = 162.071166992187500000
       end
       inherited Arc2: TArc
-        Position.Y = 200.000000000000000000
+        Position.Y = 180.611312866210900000
       end
       inherited Image2: TImage
         MultiResBitmap.Height = 54
         MultiResBitmap.Width = 76
         Position.X = 160.000000000000000000
-        Position.Y = 150.000000000000000000
+        Position.Y = 134.489044189453100000
       end
       inherited Rectangle2: TRectangle
         Align = Center
@@ -568,8 +568,9 @@ object GameForm: TGameForm
     Size.Height = 548.000000000000000000
     Size.PlatformDefault = False
     inherited GameOverLayout: TLayout
+      Margins.Top = 50.000000000000000000
       Size.Width = 320.000000000000000000
-      Size.Height = 498.000000000000000000
+      Size.Height = 353.000000000000000000
       inherited layGameTop: TLayout
         Size.Width = 320.000000000000000000
         inherited GameOverLBL: TLabel

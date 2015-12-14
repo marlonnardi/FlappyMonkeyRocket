@@ -7,7 +7,7 @@ uses
   System.Generics.Collections,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
   FMX.Effects, FMX.StdCtrls, Math, FMX.Ani, FMX.Filter.Effects, FMX.Layouts,System.IOUtils,
-  System.IniFiles, FMX.Platform,
+  System.IniFiles, FMX.Platform, FMX.Advertising,
   Interfaces.Controller.GUI, uGameOver, uReady, FMX.Controls.Presentation;
 
 type
@@ -34,9 +34,9 @@ type
       Shift: TShiftState; X, Y: Single);
     procedure GetReadyLayoutClick(Sender: TObject);
     procedure FormHide(Sender: TObject);
-    procedure ReplayBTNClick(Sender: TObject);
-    procedure OKBTNClick(Sender: TObject);
     procedure TimerTimer(Sender: TObject);
+    procedure MyGameOverFrameReplayBTNClick(Sender: TObject);
+    procedure MyGameOverFrameOKBTNClick(Sender: TObject);
   private
     FController: IAppController;
     type
@@ -60,6 +60,8 @@ type
     IniFileName: String;
     procedure Run;
     class property OnCreateGUI: TOnCreateGUI read FOnCreateGUI write FOnCreateGUI;
+
+    procedure Propaganda(Banner : TBannerAd; ID : string);
   end;
 
 var
@@ -95,42 +97,42 @@ end;
 
 function TGameForm.GetBirdPoint: TPointF;
 begin
- Result:= TPointF.Create(BirdSprite.Position.X,BirdSprite.Position.Y);
+  Result:= TPointF.Create(BirdSprite.Position.X,BirdSprite.Position.Y);
 end;
 
 procedure TGameForm.ResetGame;
 begin
- Application.ProcessMessages;
+  Application.ProcessMessages;
 end;
 
 procedure TGameForm.GameOver(AScore, ABestScore: Integer);
 begin
- Sleep(1000);
- MyGameOverFrame.GOScoreLBL.Text:= IntToStr(AScore);
- MyGameOverFrame.BestScoreLbl.Text:= IntToStr(ABestScore);
- MyGameOverFrame.BringToFront;
- MyGameOverFrame.Visible:= True;
- ScoreLBL.Visible:= False;
- MyGameOverFrame.GOFloat.Enabled := True;
+  Sleep(1000);
+  MyGameOverFrame.GOScoreLBL.Text:= IntToStr(AScore);
+  MyGameOverFrame.BestScoreLbl.Text:= IntToStr(ABestScore);
+  MyGameOverFrame.BringToFront;
+  MyGameOverFrame.Visible:= True;
+  ScoreLBL.Visible:= False;
+  MyGameOverFrame.GOFloat.Enabled := True;
 end;
 
 procedure TGameForm.AddPipe(APipe: TPipe);
 var R: TLayout;
 begin
-// GameForm.BeginUpdate;
- R:= TLayout(BigPipe.Clone(Self));
- R.Parent:= GameForm;
- R.Visible:= True;
- R.Position.X:= APipe.Position.X;
- R.Position.Y:= APipe.Position.Y;
- R.RotationAngle:= APipe.Angle;
- R.Tag:= APipe.Tag;
- APipe.Layout:= R;
+  // GameForm.BeginUpdate;
+  R:= TLayout(BigPipe.Clone(Self));
+  R.Parent:= GameForm;
+  R.Visible:= True;
+  R.Position.X:= APipe.Position.X;
+  R.Position.Y:= APipe.Position.Y;
+  R.RotationAngle:= APipe.Angle;
+  R.Tag:= APipe.Tag;
+  APipe.Layout:= R;
 
- Ground.BringToFront;
- GroundLayout.BringToFront;
- ScoreLBL.BringToFront;
-// GameForm.EndUpdate;
+  Ground.BringToFront;
+  GroundLayout.BringToFront;
+  ScoreLBL.BringToFront;
+  // GameForm.EndUpdate;
 end;
 
 procedure TGameForm.RemovePipe(APipe: TPipe);
@@ -144,6 +146,39 @@ begin
  if Assigned(APipe.Layout) then
   APipe.Layout.Position.X:= APipe.Position.X;
 // GameForm.EndUpdate;
+end;
+
+procedure TGameForm.MyGameOverFrameOKBTNClick(Sender: TObject);
+begin
+  MyGameOverFrame.Position.Y := GameForm.Height;
+  MyGameOverFrame.Visible := False;
+  GameForm.Close;
+  MenuForm.Show;
+end;
+
+procedure TGameForm.MyGameOverFrameReplayBTNClick(Sender: TObject);
+begin
+  MyGameOverFrame.Position.Y := GameForm.Height;
+  MyGameOverFrame.Visible:= False;
+
+  Propaganda(MyReadyFrame.BannerAd1, 'ca-app-pub-4608094404416880/8453766253');
+
+  MyReadyFrame.Visible:= True;
+  FController.Replay;
+end;
+
+procedure TGameForm.Propaganda(Banner: TBannerAd; ID : string);
+begin
+  {Propaganda}
+  if Banner.AdUnitID = EmptyStr then
+  begin
+    {$IFDEF DEBUG}
+    Banner.TestMode := True;
+    {$ENDIF}
+    Banner.AdUnitID := ID;
+  end;
+  Banner.LoadAd;
+  Banner.Visible := True;
 end;
 
 procedure TGameForm.SetBird(ABird: TBird);
@@ -194,7 +229,7 @@ end;
 
 procedure TGameForm.FormHide(Sender: TObject);
 begin
- MenuForm.Show;
+  MenuForm.Show;
 end;
 
 procedure TGameForm.FormMouseDown(Sender: TObject; Button: TMouseButton;
@@ -203,36 +238,22 @@ begin
  FController.Tapped;
 end;
 
-procedure TGameForm.ReplayBTNClick(Sender: TObject);
-begin
- MyGameOverFrame.Position.Y := GameForm.Height;
- MyGameOverFrame.Visible:= false;
- MyReadyFrame.Visible:= true;
- FController.Replay;
-end;
-
 procedure TGameForm.GetReadyLayoutClick(Sender: TObject);
 begin
  MyReadyFRame.Visible:= False;
+ MyReadyFrame.BannerAd1.Visible := False;
  ScoreLBL.Visible:= True;
  FController.StartGame;
-end;
-
-procedure TGameForm.OKBTNClick(Sender: TObject);
-begin
-  MyGameOverFrame.Position.Y := GameForm.Height;
-  MyGameOverFrame.Visible := False;
-  GameForm.Close;
-  MenuForm.Show;
 end;
 
 procedure TGameForm.Run;
 begin
  FController.Replay;
- MyGameOverFrame.Visible:= false;
- MyReadyFrame.Visible:= true;
+ MyGameOverFrame.Visible:= False;
+
+ Propaganda(MyReadyFrame.BannerAd1, 'ca-app-pub-4608094404416880/8453766253');
+
+ MyReadyFrame.Visible:= True;
 end;
-
-
 
 end.

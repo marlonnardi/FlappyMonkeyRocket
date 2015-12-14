@@ -141,5 +141,9 @@ object ReadyFrame: TReadyFrame
       Size.PlatformDefault = False
       EndAngle = -90.000000000000000000
     end
+    object BannerAd1: TBannerAd
+      Align = MostTop
+      OnDidFail = BannerAd1DidFail
+    end
   end
 end

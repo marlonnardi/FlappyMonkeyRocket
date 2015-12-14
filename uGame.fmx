@@ -568,38 +568,29 @@ object GameForm: TGameForm
     Size.Height = 548.000000000000000000
     Size.PlatformDefault = False
     inherited GameOverLayout: TLayout
-      Size.Height = 548.000000000000000000
-      inherited Layout1: TLayout
-        Position.Y = 421.000000000000000000
-        inherited OKBTN: TButton
-          Position.X = 40.000000000000000000
-          OnClick = OKBTNClick
+      Size.Width = 320.000000000000000000
+      Size.Height = 498.000000000000000000
+      inherited layGameTop: TLayout
+        Size.Width = 320.000000000000000000
+        inherited GameOverLBL: TLabel
+          Size.Width = 320.000000000000000000
         end
-        inherited ReplayBTN: TButton
-          OnClick = ReplayBTNClick
+        inherited RectangleScore: TRectangle
+          Size.Width = 300.000000000000000000
+          inherited RectangleTotal: TRectangle
+            Position.X = 109.000000000000000000
+          end
         end
       end
-      inherited Rectangle3: TRectangle
-        Size.Height = 222.000000000000000000
-        Stroke.Color = claChocolate
-        inherited Label2: TLabel
-          Margins.Top = 15.000000000000000000
-          Position.Y = 15.000000000000000000
-          Size.Height = 40.000000000000000000
-        end
-        inherited Label4: TLabel
-          Position.Y = 116.000000000000000000
-        end
-        inherited GOScoreLBL: TLabel
-          Size.Height = 46.000000000000000000
-          TextSettings.Font.Size = 30.000000000000000000
-        end
-        inherited BestScoreLBL: TLabel
-          StyledSettings = [Family]
-          Position.Y = 166.000000000000000000
-          Size.Height = 42.000000000000000000
-          TextSettings.Font.Size = 28.000000000000000000
-        end
+    end
+    inherited layBotoes: TLayout
+      Position.Y = 453.000000000000000000
+      Size.Width = 320.000000000000000000
+      inherited OKBTN: TButton
+        OnClick = MyGameOverFrameOKBTNClick
+      end
+      inherited ReplayBTN: TButton
+        OnClick = MyGameOverFrameReplayBTNClick
       end
     end
   end

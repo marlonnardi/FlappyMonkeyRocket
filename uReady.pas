@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
   FMX.Objects, FMX.Filter.Effects, FMX.Effects, FMX.Ani, FMX.Layouts,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, FMX.Advertising;
 
 type
   TReadyFrame = class(TFrame)
@@ -22,6 +22,8 @@ type
     Rectangle1: TRectangle;
     Label1: TLabel;
     Pie1: TPie;
+    BannerAd1: TBannerAd;
+    procedure BannerAd1DidFail(Sender: TObject; const Error: string);
   private
     { Private declarations }
   public
@@ -31,5 +33,12 @@ type
 implementation
 
 {$R *.fmx}
+
+procedure TReadyFrame.BannerAd1DidFail(Sender: TObject; const Error: string);
+begin
+  {$IFDEF DEBUG}
+  ShowMessage(Error);
+  {$ENDIF}
+end;
 
 end.

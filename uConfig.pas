@@ -16,17 +16,16 @@ type
   end;
 
   TSingletonConfig = class(TConfig)
-    private
-    public
-      constructor Create;
-      destructor Destroy; override;
+  private
+  public
+    constructor Create;
+    destructor Destroy; override;
 
-      procedure LigaSom;
-      procedure DesligaSom;
+    procedure LigaSom;
+    procedure DesligaSom;
 
-      class function GetInstance : TSingletonConfig; virtual;
-      class procedure LeaveInstance; virtual;
-
+    class function GetInstance: TSingletonConfig; virtual;
+    class procedure LeaveInstance; virtual;
   end;
 
 var

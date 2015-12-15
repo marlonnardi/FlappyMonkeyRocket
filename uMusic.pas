@@ -23,6 +23,8 @@ implementation
 
 { TMusic }
 
+uses uConfig;
+
 constructor TMusic.Create(Som: TSom);
 begin
   FSom  := Som;
@@ -46,6 +48,9 @@ end;
 procedure TMusic.Execute;
 begin
   inherited;
+  if not(FSingletonConfig.SomLigado) then
+    Exit;
+
   case FSom of
     Wing: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim + 'sfx_wing.mp3';
     Pointer: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim +  'sfx_point.mp3';

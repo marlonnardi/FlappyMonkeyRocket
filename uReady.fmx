@@ -31,15 +31,16 @@ object ReadyFrame: TReadyFrame
     end
     object GetReadyLBL: TLabel
       Anchors = []
-      StyledSettings = [Family]
+      StyledSettings = []
       Position.X = -32.000000000000000000
       Position.Y = 47.455032348632810000
       Size.Width = 384.000000000000000000
       Size.Height = 78.000000000000000000
       Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Showcard Gothic'
       TextSettings.Font.Size = 48.000000000000000000
       TextSettings.Font.Style = [fsBold]
-      TextSettings.FontColor = claFirebrick
+      TextSettings.FontColor = claChocolate
       TextSettings.HorzAlign = Center
       Text = 'GET READY!'
       object FloatAnimation1: TFloatAnimation

@@ -97,20 +97,20 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_768x1024.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
-            <RemoteName>Default-Portrait~ipad.png</RemoteName>
-            <DeployClass>iPad_Launch768x1024</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="iOSDevice32\Release\FlappyBird.dSYM" Condition="'$(Config)'=='Release'">
             <RemoteDir>$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF\</RemoteDir>
             <RemoteName>FlappyFiremonkey</RemoteName>
             <DeployClass>ProjectiOSDeviceDebug</DeployClass>
             <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_768x1024.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteName>Default-Portrait~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch768x1024</DeployClass>
+            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>

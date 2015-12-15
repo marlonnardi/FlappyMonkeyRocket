@@ -210,7 +210,7 @@ end;
 
 procedure TGameForm.TimerTimer(Sender: TObject);
 begin
-  if MyReadyFrame.Visible OR MyGameOverFrame.Visible then
+  if {MyReadyFrame.Visible OR} MyGameOverFrame.Visible then
     Exit;
 
   if GroundLayout.Tag = 0 then

@@ -12,7 +12,8 @@ uses
   uGameOver in 'uGameOver.pas' {GameOverFrame: TFrame},
   uReady in 'uReady.pas' {ReadyFrame: TFrame},
   uDmStyle in 'uDmStyle.pas' {dmStyle: TDataModule},
-  uMusic in 'uMusic.pas';
+  uMusic in 'uMusic.pas',
+  uConfig in 'uConfig.pas';
 
 {$R *.res}
 

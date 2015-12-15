@@ -596,7 +596,7 @@ object GameForm: TGameForm
     end
   end
   object Timer: TTimer
-    Interval = 66
+    Interval = 100
     OnTimer = TimerTimer
     Left = 265
     Top = 176

@@ -16,15 +16,16 @@ object GameOverFrame: TGameOverFrame
       TabOrder = 0
       object GameOverLBL: TLabel
         Align = Bottom
-        StyledSettings = [Family]
+        StyledSettings = []
         Margins.Top = 20.000000000000000000
         Position.Y = 5.000000000000000000
         Size.Width = 330.000000000000000000
         Size.Height = 71.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Showcard Gothic'
         TextSettings.Font.Size = 48.000000000000000000
         TextSettings.Font.Style = [fsBold]
-        TextSettings.FontColor = claFirebrick
+        TextSettings.FontColor = claChocolate
         TextSettings.HorzAlign = Center
         Text = 'GAME OVER'
       end
@@ -146,6 +147,21 @@ object GameOverFrame: TGameOverFrame
             TextSettings.HorzAlign = Center
             Text = 'MEDAL'
           end
+        end
+      end
+      object CircleMedal: TCircle
+        Fill.Color = claCornflowerblue
+        Position.X = 52.000000000000000000
+        Position.Y = 152.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFE29A66
+        Stroke.Thickness = 2.000000000000000000
+        Stroke.Dash = Dot
+        object Bitmap: TBitmapAnimation
+          Duration = 0.200000002980232200
+          PropertyName = 'Fill.Bitmap.Bitmap'
         end
       end
     end

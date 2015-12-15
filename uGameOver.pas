@@ -25,6 +25,8 @@ type
     RectangleMeda: TRectangle;
     lbl3: TLabel;
     BannerAd1: TBannerAd;
+    CircleMedal: TCircle;
+    Bitmap: TBitmapAnimation;
   private
     { Private declarations }
   public

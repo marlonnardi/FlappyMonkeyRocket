@@ -3,10 +3,11 @@ unit uMenu;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Objects, FMX.Ani, FMX.Effects, FMX.Platform, fOpen,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, uConfig;
 
 type
   TMenuForm = class(TForm)
@@ -20,14 +21,17 @@ type
     GlowEffect3: TGlowEffect;
     FMonkeyA: TImage;
     FloatAnimation1: TFloatAnimation;
-    swtchPropaganda: TSwitch;
+    swtchSom: TSwitch;
     lblPropaganda: TLabel;
     procedure PlayBTNClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure swtchSomSwitch(Sender: TObject);
   private
     { Private declarations }
+
   public
-    function HandleAppEvent(AAppEvent: TApplicationEvent; AContext: TObject): Boolean;
+    function HandleAppEvent(AAppEvent: TApplicationEvent;
+      AContext: TObject): Boolean;
   end;
 
 var
@@ -39,28 +43,37 @@ implementation
 
 uses uGame, uDmStyle;
 
-
 procedure TMenuForm.FormCreate(Sender: TObject);
 begin
- {$IFDEF MSWINDOWS}
- BorderStyle:= TFmxFormBorderStyle.bsSizeable;
- {$ELSE}
- //BorderStyle:= TFmxFormBorderStyle.None; {BUG}
- {$ENDIF}
+{$IFDEF MSWINDOWS}
+  BorderStyle := TFmxFormBorderStyle.bsSizeable;
+{$ELSE}
+  // BorderStyle:= TFmxFormBorderStyle.None; {BUG}
+{$ENDIF}
+  swtchSom.IsChecked := FSingletonConfig.SomLigado;
 end;
 
 procedure TMenuForm.PlayBTNClick(Sender: TObject);
 begin
- GameForm.Run;
- MenuForm.Hide;
- {$IFDEF MSWINDOWS}
- GameForm.ShowModal;
- {$ELSE}
- GameForm.Show;
- {$ENDIF}
+  GameForm.Run;
+  MenuForm.Hide;
+{$IFDEF MSWINDOWS}
+  GameForm.ShowModal;
+{$ELSE}
+  GameForm.Show;
+{$ENDIF}
 end;
 
-function TMenuForm.HandleAppEvent(AAppEvent: TApplicationEvent; AContext: TObject): Boolean;
+procedure TMenuForm.swtchSomSwitch(Sender: TObject);
+begin
+  if swtchSom.IsChecked then
+    FSingletonConfig.LigaSom
+  else
+    FSingletonConfig.DesligaSom;
+end;
+
+function TMenuForm.HandleAppEvent(AAppEvent: TApplicationEvent;
+  AContext: TObject): Boolean;
 begin
   case AAppEvent of
     TApplicationEvent.FinishedLaunching:

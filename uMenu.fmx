@@ -18,7 +18,7 @@ object MenuForm: TMenuForm
     Align = Bottom
     Fill.Color = xFFDCCAA8
     HitTest = False
-    Position.Y = 281.000000000000000000
+    Position.Y = 282.000000000000000000
     Size.Width = 320.000000000000000000
     Size.Height = 95.000000000000000000
     Size.PlatformDefault = False
@@ -748,7 +748,7 @@ object MenuForm: TMenuForm
           'y\groundA.jpg'
       end>
     Align = Bottom
-    Position.Y = 257.000000000000000000
+    Position.Y = 258.000000000000000000
     Size.Width = 320.000000000000000000
     Size.Height = 24.000000000000000000
     Size.PlatformDefault = False
@@ -1757,23 +1757,24 @@ object MenuForm: TMenuForm
     object lblPropaganda: TLabel
       Align = Left
       AutoSize = True
-      Size.Width = 81.000000000000000000
+      Size.Width = 80.000000000000000000
       Size.Height = 95.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'listboxitemdetaillabel'
       TextSettings.WordWrap = False
-      Text = 'Propaganda'
+      Text = 'Som Ligado'
     end
-    object swtchPropaganda: TSwitch
+    object swtchSom: TSwitch
       Align = Left
-      IsChecked = False
-      Position.X = 81.000000000000000000
-      Position.Y = 34.000000000000000000
-      Size.Width = 76.000000000000000000
-      Size.Height = 28.000000000000000000
+      IsChecked = True
+      Position.X = 80.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 78.000000000000000000
+      Size.Height = 30.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'switchstyle'
       TabOrder = 1
+      OnSwitch = swtchSomSwitch
     end
   end
   object PlayBTN: TButton
@@ -1783,9 +1784,9 @@ object MenuForm: TMenuForm
     Margins.Right = 20.000000000000000000
     Margins.Bottom = 10.000000000000000000
     Position.X = 20.000000000000000000
-    Position.Y = 376.000000000000000000
+    Position.Y = 377.000000000000000000
     Size.Width = 280.000000000000000000
-    Size.Height = 43.000000000000000000
+    Size.Height = 42.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'buttonstyle'
     TabOrder = 0
@@ -1796,17 +1797,17 @@ object MenuForm: TMenuForm
   end
   object LogoLBL: TLabel
     Align = Top
-    StyledSettings = [Family]
+    StyledSettings = []
     Margins.Top = 50.000000000000000000
     Position.Y = 50.000000000000000000
     Size.Width = 320.000000000000000000
     Size.Height = 150.000000000000000000
     Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Showcard Gothic'
     TextSettings.Font.Size = 48.000000000000000000
-    TextSettings.Font.Style = [fsBold]
-    TextSettings.FontColor = claFirebrick
+    TextSettings.FontColor = claChocolate
     TextSettings.HorzAlign = Center
-    Text = 'Birds Flappy'
+    Text = 'Flappy Birds FMX'
     object GlowEffect3: TGlowEffect
       Softness = 0.400000005960464500
       GlowColor = claDarkorange

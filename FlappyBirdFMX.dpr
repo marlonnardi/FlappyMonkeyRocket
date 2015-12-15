@@ -13,7 +13,8 @@ uses
   uReady in 'uReady.pas' {ReadyFrame: TFrame},
   uDmStyle in 'uDmStyle.pas' {dmStyle: TDataModule},
   uMusic in 'uMusic.pas',
-  uConfig in 'uConfig.pas';
+  uConfig in 'uConfig.pas',
+  FMX.FontGlyphs.Android in 'FMX.FontGlyphs.Android.pas';
 
 {$R *.res}
 

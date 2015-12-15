@@ -37,7 +37,7 @@ object ReadyFrame: TReadyFrame
       Size.Width = 384.000000000000000000
       Size.Height = 78.000000000000000000
       Size.PlatformDefault = False
-      TextSettings.Font.Family = 'Showcard Gothic'
+      TextSettings.Font.Family = '04b_19'
       TextSettings.Font.Size = 48.000000000000000000
       TextSettings.Font.Style = [fsBold]
       TextSettings.FontColor = claChocolate
@@ -119,12 +119,14 @@ object ReadyFrame: TReadyFrame
       XRadius = 5.000000000000000000
       YRadius = 5.000000000000000000
       object Label1: TLabel
-        StyledSettings = [Family, Size]
+        StyledSettings = []
         Position.X = -8.000000000000000000
         Position.Y = 3.000000000000000000
         Size.Width = 89.000000000000000000
         Size.Height = 30.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = '04b_19'
+        TextSettings.Font.Size = 20.000000000000000000
         TextSettings.Font.Style = [fsBold]
         TextSettings.FontColor = claWhite
         TextSettings.HorzAlign = Center

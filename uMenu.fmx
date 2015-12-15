@@ -1757,17 +1757,21 @@ object MenuForm: TMenuForm
     object lblPropaganda: TLabel
       Align = Left
       AutoSize = True
+      StyledSettings = [Size, Style, FontColor]
+      Margins.Left = 5.000000000000000000
+      Position.X = 5.000000000000000000
       Size.Width = 80.000000000000000000
       Size.Height = 95.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'listboxitemdetaillabel'
+      TextSettings.Font.Family = '04b_19'
       TextSettings.WordWrap = False
       Text = 'Som Ligado'
     end
     object swtchSom: TSwitch
       Align = Left
       IsChecked = True
-      Position.X = 80.000000000000000000
+      Position.X = 85.000000000000000000
       Position.Y = 32.000000000000000000
       Size.Width = 78.000000000000000000
       Size.Height = 30.000000000000000000
@@ -1779,7 +1783,7 @@ object MenuForm: TMenuForm
   end
   object PlayBTN: TButton
     Align = Bottom
-    StyledSettings = [Family, FontColor]
+    StyledSettings = [FontColor]
     Margins.Left = 20.000000000000000000
     Margins.Right = 20.000000000000000000
     Margins.Bottom = 10.000000000000000000
@@ -1791,6 +1795,7 @@ object MenuForm: TMenuForm
     StyleLookup = 'buttonstyle'
     TabOrder = 0
     Text = 'Play'
+    TextSettings.Font.Family = '04b_19'
     TextSettings.Font.Size = 24.000000000000000000
     TextSettings.Font.Style = [fsBold]
     OnClick = PlayBTNClick
@@ -1803,7 +1808,7 @@ object MenuForm: TMenuForm
     Size.Width = 320.000000000000000000
     Size.Height = 150.000000000000000000
     Size.PlatformDefault = False
-    TextSettings.Font.Family = 'Showcard Gothic'
+    TextSettings.Font.Family = '04b_19'
     TextSettings.Font.Size = 48.000000000000000000
     TextSettings.FontColor = claChocolate
     TextSettings.HorzAlign = Center

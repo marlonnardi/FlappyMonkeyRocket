@@ -26,8 +26,15 @@ type
     lbl3: TLabel;
     BannerAd1: TBannerAd;
     CircleMedal: TCircle;
-    Bitmap: TBitmapAnimation;
     imgMedal: TImage;
+    CircleMedal1: TCircle;
+    imgMedal1: TImage;
+    CircleMedal2: TCircle;
+    imgMedal2: TImage;
+    CircleMedal3: TCircle;
+    imgMedal3: TImage;
+    CircleMedal4: TCircle;
+    imgMedal4: TImage;
   private
     { Private declarations }
   public

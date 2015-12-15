@@ -17,6 +17,7 @@ type
 
   TSingletonConfig = class(TConfig)
   private
+
   public
     constructor Create;
     destructor Destroy; override;

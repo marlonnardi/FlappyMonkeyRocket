@@ -27,6 +27,7 @@ type
     BannerAd1: TBannerAd;
     CircleMedal: TCircle;
     Bitmap: TBitmapAnimation;
+    imgMedal: TImage;
   private
     { Private declarations }
   public

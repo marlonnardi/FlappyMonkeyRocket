@@ -110,23 +110,23 @@ object ReadyFrame: TReadyFrame
       Anchors = []
       Fill.Color = claOrangered
       HitTest = False
-      Position.X = 133.916671752929700000
-      Position.Y = 262.962066650390600000
-      Size.Width = 73.000000000000000000
-      Size.Height = 33.000000000000000000
+      Position.X = 134.000000000000000000
+      Position.Y = 263.000000000000000000
+      Size.Width = 83.000000000000000000
+      Size.Height = 34.000000000000000000
       Size.PlatformDefault = False
       Stroke.Color = claWhite
       XRadius = 5.000000000000000000
       YRadius = 5.000000000000000000
       object Label1: TLabel
         StyledSettings = []
-        Position.X = -8.000000000000000000
+        Position.X = -2.000000000000000000
         Position.Y = 3.000000000000000000
         Size.Width = 89.000000000000000000
         Size.Height = 30.000000000000000000
         Size.PlatformDefault = False
         TextSettings.Font.Family = '04b_19'
-        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.Size = 25.000000000000000000
         TextSettings.Font.Style = [fsBold]
         TextSettings.FontColor = claWhite
         TextSettings.HorzAlign = Center
@@ -146,7 +146,7 @@ object ReadyFrame: TReadyFrame
     end
   end
   object BannerAd1: TBannerAd
-    AdSize = Small
+    AdSize = Medium
     Align = MostTop
     OnDidFail = BannerAd1DidFail
   end

@@ -72,7 +72,7 @@ implementation
 
 {$R *.fmx}
 
-uses uMenu, uDmStyle;
+uses uMenu, uDmStyle, uConfig;
 
 // ------------------------- INTERFACE ------------------------- //
 
@@ -108,7 +108,14 @@ end;
 
 procedure TGameForm.GameOver(AScore, ABestScore: Integer);
 begin
+  {Propaganda}
   Propaganda(MyGameOverFrame.BannerAd1, 'ca-app-pub-4608094404416880/8453766253');
+
+  {Cores}
+  MyGameOverFrame.CircleMedal.Fill.Color :=
+    FSingletonConfig.GetColorPoints(AScore);
+  MyGameOverFrame.BestScoreLBL.TextSettings.FontColor :=
+    FSingletonConfig.GetColorPoints(ABestScore);
 
   MyGameOverFrame.GOScoreLBL.Text:= IntToStr(AScore);
   MyGameOverFrame.BestScoreLbl.Text:= IntToStr(ABestScore);

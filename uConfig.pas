@@ -2,7 +2,7 @@ unit uConfig;
 
 interface
 
-uses System.SysUtils;
+uses System.SysUtils, System.UITypes;
 
 type
   TConfig = class
@@ -13,6 +13,8 @@ type
     destructor Destroy; override;
   public
     property SomLigado: Boolean read FSomLigado write FSomLigado;
+
+    function GetColorPoints(Points: Integer): TAlphaColor;
   end;
 
   TSingletonConfig = class(TConfig)
@@ -43,6 +45,19 @@ end;
 destructor TConfig.Destroy;
 begin
   inherited;
+end;
+
+function TConfig.GetColorPoints(Points: Integer): TAlphaColor;
+begin
+  Result  := TAlphaColorRec.Chocolate;
+  if Points >= 50 then
+    Result  := TAlphaColorRec.White;
+  if Points >= 100 then
+    Result  := TAlphaColorRec.Yellow;
+  if Points >= 200 then
+    Result  := TAlphaColorRec.Blueviolet;
+  if Points >= 400 then
+    Result  := TAlphaColorRec.Black;
 end;
 
 { TSingletonConfig }

@@ -1796,7 +1796,7 @@ object MenuForm: TMenuForm
     TabOrder = 0
     Text = 'Play'
     TextSettings.Font.Family = '04b_19'
-    TextSettings.Font.Size = 24.000000000000000000
+    TextSettings.Font.Size = 35.000000000000000000
     TextSettings.Font.Style = [fsBold]
     OnClick = PlayBTNClick
   end

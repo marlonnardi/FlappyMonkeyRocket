@@ -12,7 +12,7 @@ interface
 {$SCOPEDENUMS ON}
 
 uses
-  FMX.FontGlyphs, Androidapi.JNI.GraphicsContentViewText;
+  FMX.FontGlyphs, Androidapi.JNI.GraphicsContentViewText, System.IOUtils;
 
 type
   TAndroidFontGlyphManager = class(TFontGlyphManager)
@@ -63,6 +63,7 @@ var
   Typeface: JTypeface;
   FamilyName: JString;
   Metrics: JPaint_FontMetricsInt;
+  FontFile : string;
 begin
   FPaint.setAntiAlias(True);
   FPaint.setTextSize(CurrentSettings.Size * CurrentSettings.Scale);
@@ -82,7 +83,14 @@ begin
           TypefaceFlag := TJTypeface.JavaClass.ITALIC
         else
           TypefaceFlag := TJTypeface.JavaClass.NORMAL;
-    Typeface := TJTypeface.JavaClass.create(FamilyName, TypefaceFlag);
+
+    //Typeface := TJTypeface.JavaClass.create(FamilyName, TypefaceFlag);
+    FontFile := TPath.GetDocumentsPath + PathDelim + {CurrentSettings.Family} '04B_19' + '.TTF';
+    if FileExists(FontFile) then
+      Typeface := TJTypeface.JavaClass.createFromFile(StringToJString(FontFile))
+    else
+      Typeface := TJTypeface.JavaClass.Create(FamilyName, TypefaceFlag);
+
     FPaint.setTypeface(Typeface);
     try
       Metrics := FPaint.getFontMetricsInt;

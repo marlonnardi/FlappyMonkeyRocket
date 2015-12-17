@@ -11,18 +11,21 @@ uses
 type
   TReadyFrame = class(TFrame)
     GetReadyLayout: TLayout;
-    Arc1: TArc;
-    Arc2: TArc;
+    BannerAd1: TBannerAd;
+    Rectangle1: TRectangle;
+    Label1: TLabel;
+    layReady: TLayout;
     GetReadyLBL: TLabel;
     FloatAnimation1: TFloatAnimation;
     GlowEffect3: TGlowEffect;
     Image2: TImage;
     MonochromeEffect1: TMonochromeEffect;
-    Rectangle2: TRectangle;
-    Rectangle1: TRectangle;
-    Label1: TLabel;
+    Arc2: TArc;
+    Arc1: TArc;
+    layTap: TLayout;
     Pie1: TPie;
-    BannerAd1: TBannerAd;
+    Rectangle2: TRectangle;
+    imgTap: TImage;
     procedure BannerAd1DidFail(Sender: TObject; const Error: string);
   private
     { Private declarations }

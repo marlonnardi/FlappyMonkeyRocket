@@ -79,22 +79,22 @@ uses uMenu, uDmStyle, uConfig;
 
 procedure TGameForm.RegisterController(const AController: IAppController);
 begin
- FController:= AController;
+  FController:= AController;
 end;
 
 function TGameForm.GetGamePanelSize: TSizeF;
 begin
- Result:= TSizeF.Create(GameForm.Width,GameForm.Height-(Ground.Height+GroundLayout.Height));
+  Result:= TSizeF.Create(GameForm.Width,GameForm.Height-(Ground.Height+GroundLayout.Height));
 end;
 
 function TGameForm.GetPipeSize: TSizeF;
 begin
- Result:= TSizeF.Create(BigPipe.Width,BigPipe.Height);
+  Result:= TSizeF.Create(BigPipe.Width,BigPipe.Height);
 end;
 
 function TGameForm.GetBirdSize: TSizeF;
 begin
- Result:= TSizeF.Create(BirdSprite.Width,BirdSprite.Height);
+  Result:= TSizeF.Create(BirdSprite.Width,BirdSprite.Height);
 end;
 
 function TGameForm.GetBirdPoint: TPointF;
@@ -118,8 +118,8 @@ begin
   MyGameOverFrame.BestScoreLBL.TextSettings.FontColor :=
     FSingletonConfig.GetColorPoints(ABestScore);
 
-  MyGameOverFrame.GOScoreLBL.Text:= IntToStr(AScore);
-  MyGameOverFrame.BestScoreLbl.Text:= IntToStr(ABestScore);
+  MyGameOverFrame.GOScoreLBL.Text:= '202';//IntToStr(AScore);
+  MyGameOverFrame.BestScoreLbl.Text:= '202';//IntToStr(ABestScore);
   MyGameOverFrame.BringToFront;
   MyGameOverFrame.Visible:= True;
   ScoreLBL.Visible:= False;
@@ -147,7 +147,7 @@ end;
 
 procedure TGameForm.RemovePipe(APipe: TPipe);
 begin
- APipe.Layout.DisposeOf;
+  APipe.Layout.DisposeOf;
 end;
 
 procedure TGameForm.MovePipe(APipe: TPipe);
@@ -188,7 +188,6 @@ begin
     Banner.TestMode := True;
     {$ENDIF}
     Banner.AdUnitID := ID;
-
   end;
   Banner.LoadAd;
   Banner.Visible := True;
@@ -202,12 +201,12 @@ end;
 
 procedure TGameForm.SetBird(ABird: TBird);
 begin
- BirdSprite.Position.X:= ABird.Position.X;
- BirdSprite.Position.Y:= ABird.Position.Y;
- BirdSprite.RotationAngle:= ABird.Angle;
- if ABird.Flap then
+  BirdSprite.Position.X:= ABird.Position.X;
+  BirdSprite.Position.Y:= ABird.Position.Y;
+  BirdSprite.RotationAngle:= ABird.Angle;
+  if ABird.Flap then
   BirdSprite.Bitmap.Assign(FBird1.Bitmap)
- else
+  else
   BirdSprite.Bitmap.Assign(FBird2.Bitmap);
 end;
 
@@ -221,6 +220,7 @@ begin
   if {MyReadyFrame.Visible OR} MyGameOverFrame.Visible then
     Exit;
 
+  {Giro das barras inferiores}
   if GroundLayout.Tag = 0 then
   begin
     GroundB.Opacity := 1;

@@ -20,7 +20,9 @@ uses
 
 var Controller: IAppController;
 begin
+  {$IFDEF DEBUG}
   ReportMemoryLeaksOnShutdown := True;
+  {$ENDIF}
 
   Controller:= TAppController.Create;
 

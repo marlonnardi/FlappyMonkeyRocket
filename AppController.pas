@@ -119,27 +119,27 @@ end;
 
 procedure TAppController.ResetGame;
 begin
- RemovePipes;
- BirdYPos:= TBird.DefPosition.Y;
- BirdAngle:= DEF_BIRD_ANGLE;
- BirdUp:= False;
- Flap:= False;
- GamePanelSize:= FGUI.GetGamePanelSize;
- SetBird(TBird.DefPosition,DEF_BIRD_ANGLE,False);
+  RemovePipes;
+  BirdYPos:= TBird.DefPosition.Y;
+  BirdAngle:= DEF_BIRD_ANGLE;
+  BirdUp:= False;
+  Flap:= False;
+  GamePanelSize:= FGUI.GetGamePanelSize;
+  SetBird(TBird.DefPosition,DEF_BIRD_ANGLE,False);
 
- FData.ResetScore;
- FGUI.SetScore(FData.GetScore);
- FGUI.ResetGame;
+  FData.ResetScore;
+  FGUI.SetScore(FData.GetScore);
+  FGUI.ResetGame;
 end;
 
 procedure TAppController.GameOver;
 begin
- if FData.GetScore >= FData.GetHighscore then
-  FData.SaveScore(FData.GetHighscore);
- TMusic.Create(TSom.Hit);
- StopGame;
- FGUI.GameOver(FData.GetScore, FData.GetHighscore);
- TMusic.Create(TSom.Die);
+  if FData.GetScore >= FData.GetHighscore then
+    FData.SaveScore(FData.GetHighscore);
+  TMusic.Create(TSom.Hit);
+  StopGame;
+  FGUI.GameOver(FData.GetScore, FData.GetHighscore);
+  TMusic.Create(TSom.Die);
 end;
 
 procedure TAppController.Tapped;
@@ -153,9 +153,9 @@ end;
 procedure TAppController.RemovePipes;
 var n: Integer;
 begin
- for n:= 0 to FPipes.Count-1 do
-  FGUI.RemovePipe(TPipe(FPipes.Items[n]));
- FPipes.Clear;
+  for n:= 0 to FPipes.Count-1 do
+    FGUI.RemovePipe(TPipe(FPipes.Items[n]));
+  FPipes.Clear;
 end;
 
 procedure TAppController.IncScore;
@@ -167,32 +167,32 @@ end;
 
 procedure TAppController.SetBird(APosition: TPointF; AAngle: Double; Flap: Boolean);
 begin
- FBird.Position:= APosition;
- FBird.Angle:= AAngle;
- FBird.Flap:= Flap;
- FGUI.SetBird(FBird);
+  FBird.Position:= APosition;
+  FBird.Angle:= AAngle;
+  FBird.Flap:= Flap;
+  FGUI.SetBird(FBird);
 end;
 
 procedure TAppController.SetBird(AYOffset,AAngle: Double; Flap: Boolean);
 begin
- FBird.Position:= PointF(FBird.DefPosition.X,FBird.Position.Y+AYOffset);
- FBird.Angle:= AAngle;
- FBird.Flap:= Flap;
- FGUI.SetBird(FBird);
+  FBird.Position:= PointF(FBird.DefPosition.X,FBird.Position.Y+AYOffset);
+  FBird.Angle:= AAngle;
+  FBird.Flap:= Flap;
+  FGUI.SetBird(FBird);
 end;
 
 procedure TAppController.AddPipe(AYOffset: Double; Bottom: Boolean);
 begin
- FPipes.Add(TPipe.Create);
- TPipe(FPipes.Last).Position:= PointF(GamePanelSize.Width,AYOffset);
- if Bottom then
-  TPipe(FPipes.Last).Angle:= 180
- else
-  TPipe(FPipes.Last).Angle:= 0;
- TPipe(FPipes.Last).Tag:= Integer(Bottom)+1;
- TPipe(FPipes.Last).TagFloat:= 0;
- TPipe(FPipes.Last).Added:= false;
- TPipe(FPipes.Last).Layout:= nil;
+  FPipes.Add(TPipe.Create);
+  TPipe(FPipes.Last).Position:= PointF(GamePanelSize.Width,AYOffset);
+  if Bottom then
+    TPipe(FPipes.Last).Angle:= 180
+  else
+    TPipe(FPipes.Last).Angle:= 0;
+  TPipe(FPipes.Last).Tag:= Integer(Bottom)+1;
+  TPipe(FPipes.Last).TagFloat:= 0;
+  TPipe(FPipes.Last).Added:= false;
+  TPipe(FPipes.Last).Layout:= nil;
 end;
 
 procedure TAppController.MainLoop(ASender: TObject);

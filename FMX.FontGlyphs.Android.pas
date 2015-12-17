@@ -12,12 +12,19 @@ interface
 {$SCOPEDENUMS ON}
 
 uses
-  FMX.FontGlyphs, Androidapi.JNI.GraphicsContentViewText, System.IOUtils;
+  FMX.FontGlyphs, System.IOUtils
+
+  {$IFDEF ANDROID}
+  ,Androidapi.JNI.GraphicsContentViewText
+  {$ENDIF}
+  ;
 
 type
   TAndroidFontGlyphManager = class(TFontGlyphManager)
   private
+    {$IFDEF ANDROID}
     FPaint: JPaint;
+    {$ENDIF}
     //Current metrics
     FTop: Integer;
     FAscent: Integer;
@@ -25,10 +32,12 @@ type
     FBottom: Integer;
     FLeading: Integer;
   protected
+    {$IFDEF ANDROID}
     procedure LoadResource; override;
     procedure FreeResource; override;
     function DoGetGlyph(const Char: UCS4Char; const Settings: TFontGlyphSettings): TFontGlyph; override;
     function DoGetBaseline: Single; override;
+    {$ENDIF}
   public
     constructor Create;
     destructor Destroy; override;
@@ -38,23 +47,33 @@ implementation
 
 uses
   System.Types, System.Math, System.Character, System.Generics.Collections, System.UIConsts, System.UITypes,
-  System.Classes, System.SysUtils, FMX.Types, FMX.Surfaces, FMX.Graphics, Androidapi.JNI.JavaTypes, Androidapi.Bitmap,
-  Androidapi.JNIBridge, Androidapi.Helpers;
+  System.Classes, System.SysUtils, FMX.Types, FMX.Surfaces, FMX.Graphics
+  {$IFDEF ANDROID}
+  ,Androidapi.JNI.JavaTypes, Androidapi.Bitmap, Androidapi.JNIBridge,
+  Androidapi.Helpers
+  {$ENDIF}
+  ;
 
 { TAndroidFontGlyphManager }
 
 constructor TAndroidFontGlyphManager.Create;
 begin
   inherited Create;
+  {$IFDEF ANDROID}
   FPaint := TJPaint.Create;
+  {$ENDIF}
 end;
 
 destructor TAndroidFontGlyphManager.Destroy;
 begin
+  {$IFDEF ANDROID}
   FPaint := nil;
+  {$ENDIF}
   inherited;
 end;
 
+
+{$IFDEF ANDROID}
 procedure TAndroidFontGlyphManager.LoadResource;
 const
   BoldAndItalic = [TFontStyle.fsBold, TFontStyle.fsItalic];
@@ -276,5 +295,6 @@ begin
     Text := nil;
   end;
 end;
+{$ENDIF}
 
 end.

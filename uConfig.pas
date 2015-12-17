@@ -59,6 +59,8 @@ begin
     Result  := TAlphaColorRec.Blueviolet;
   if Points >= 400 then
     Result  := TAlphaColorRec.Black;
+
+  Result  := TAlphaColorRec.Blueviolet;
 end;
 
 { TSingletonConfig }
@@ -107,10 +109,12 @@ var
   FFullScreenSrvice: IFMXFullScreenWindowService;
 begin
   { se a versão suportar FullScren então aplica-se }
+  {$IFDEF ANDROID}
   TPlatformServices.Current.SupportsPlatformService(IFMXFullScreenWindowService,
     FFullScreenSrvice);
   if FFullScreenSrvice <> nil then
     FFullScreenSrvice.SetFullScreen(Form, True);
+  {$ENDIF}
 end;
 
 initialization

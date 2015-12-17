@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes,
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Objects, FMX.Ani, FMX.Effects, FMX.Platform, fOpen,
+  FMX.Objects, FMX.Ani, FMX.Effects, FMX.Platform,
   FMX.Controls.Presentation, uConfig;
 
 type
@@ -29,6 +29,7 @@ type
   private
     { Private declarations }
 
+
   public
     function HandleAppEvent(AAppEvent: TApplicationEvent;
       AContext: TObject): Boolean;
@@ -49,6 +50,8 @@ begin
   BorderStyle := TFmxFormBorderStyle.bsSizeable;
 {$ELSE}
   // BorderStyle:= TFmxFormBorderStyle.None; {BUG}
+
+  FSingletonConfig.SetFullScren(Self);
 {$ENDIF}
   swtchSom.IsChecked := FSingletonConfig.SomLigado;
 end;

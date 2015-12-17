@@ -2,7 +2,7 @@ unit uConfig;
 
 interface
 
-uses System.SysUtils, System.UITypes;
+uses System.SysUtils, System.UITypes, FMX.Forms, FMX.Platform;
 
 type
   TConfig = class
@@ -26,6 +26,7 @@ type
 
     procedure LigaSom;
     procedure DesligaSom;
+    procedure SetFullScren(Form : TForm);
 
     class function GetInstance: TSingletonConfig; virtual;
     class procedure LeaveInstance; virtual;
@@ -99,6 +100,17 @@ end;
 procedure TSingletonConfig.LigaSom;
 begin
   Self.FSomLigado := True;
+end;
+
+procedure TSingletonConfig.SetFullScren(Form: TForm);
+var
+  FFullScreenSrvice: IFMXFullScreenWindowService;
+begin
+  { se a versão suportar FullScren então aplica-se }
+  TPlatformServices.Current.SupportsPlatformService(IFMXFullScreenWindowService,
+    FFullScreenSrvice);
+  if FFullScreenSrvice <> nil then
+    FFullScreenSrvice.SetFullScreen(Form, True);
 end;
 
 initialization

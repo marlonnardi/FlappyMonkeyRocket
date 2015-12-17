@@ -50,7 +50,7 @@ object ReadyFrame: TReadyFrame
         StopValue = 0.000000000000000000
       end
       object GlowEffect3: TGlowEffect
-        Softness = 0.400000005960464500
+        Softness = 0.400000005960464400
         GlowColor = claGold
         Opacity = 1.000000000000000000
       end
@@ -146,7 +146,6 @@ object ReadyFrame: TReadyFrame
     end
   end
   object BannerAd1: TBannerAd
-    AdSize = Medium
     Align = MostTop
     OnDidFail = BannerAd1DidFail
   end

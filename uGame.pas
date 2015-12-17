@@ -37,6 +37,7 @@ type
     procedure TimerTimer(Sender: TObject);
     procedure MyGameOverFrameReplayBTNClick(Sender: TObject);
     procedure MyGameOverFrameOKBTNClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     FController: IAppController;
     type
@@ -236,13 +237,13 @@ end;
 
 procedure TGameForm.FormCreate(Sender: TObject);
 begin
- if Assigned(FOnCreateGUI) then
-  FOnCreateGUI(Self);
+  if Assigned(FOnCreateGUI) then
+    FOnCreateGUI(Self);
 
- MyGameOverFrame.GOFloat.StopValue := 0;
- MyGameOverFrame.GOFloat.StartValue := GameForm.Height;
- MyGameOverFrame.Position.Y := GameForm.Height;
- IniFileName := System.IOUtils.TPath.GetDocumentsPath + System.SysUtils.PathDelim + 'Scores.dat';
+  MyGameOverFrame.GOFloat.StopValue := 0;
+  MyGameOverFrame.GOFloat.StartValue := GameForm.Height;
+  MyGameOverFrame.Position.Y := GameForm.Height;
+  IniFileName := System.IOUtils.TPath.GetDocumentsPath + System.SysUtils.PathDelim + 'Scores.dat';
 end;
 
 procedure TGameForm.FormHide(Sender: TObject);
@@ -254,6 +255,11 @@ procedure TGameForm.FormMouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Single);
 begin
   FController.Tapped;
+end;
+
+procedure TGameForm.FormShow(Sender: TObject);
+begin
+  FSingletonConfig.SetFullScren(GameForm);
 end;
 
 procedure TGameForm.GetReadyLayoutClick(Sender: TObject);

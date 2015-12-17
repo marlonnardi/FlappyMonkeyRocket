@@ -347,61 +347,61 @@ begin
   IsBirdUp:= false;
   while not Terminated do
   begin
-   if FActive then
-   begin
-    // if user tapped several times in succession
-    if BirdUp then
+    if FActive then
     begin
-      BirdUpCount:= 0;
-      IsBirdUp:= true;
-      BirdUp:= false;
+      // if user tapped several times in succession
+      if BirdUp then
+      begin
+        BirdUpCount:= 0;
+        IsBirdUp:= true;
+        BirdUp:= false;
+      end;
+
+      if FGameTicker = 0 then
+      begin
+        //PipeRange:= (GamePanelSize.Height - TPipe.Size.Height);
+        GapSize:= RandomRange(MIN_GAP_SIZE,MAX_GAP_SIZE);
+        YMinOff:= Round(GamePanelSize.Height-(GamePanelSize.Height - GapSize/2));
+        YMaxOff:= Round(GamePanelSize.Height - GapSize);
+        YOff:= RandomRange(YMinOff,YMaxOff);
+
+        FPipeAPos:= Round((YOff-TPipe.Size.Height)-(GapSize/2));
+        FPipeBPos:= YOff+Round(GapSize/2);
+
+        FAddPipe(FPipeAPos,false);
+        FAddPipe(FPipeBPos,true);
+      end;
+
+      if FGameTicker>(SPAWN_TIME*30) then
+        FGameTicker:= 0
+      else
+       Inc(FGameTicker);
+
+       // for a smooth rising
+      if IsBirdUp and (BirdUpCount <= BIRD_UP_SPEED)then
+      begin
+       if BirdAngle > -15 then
+        BirdAngle:= BirdAngle-(90/(BIRD_UP_SPEED));
+       BirdYPos:= -Round(BIRD_UP_HEIGHT/BIRD_UP_SPEED);
+       Inc(BirdUpCount);
+      end
+      else
+      begin
+       IsBirdUp:= false;
+       BirdUpCount:= 0;
+
+       if BirdAngle<90 then
+        BirdAngle:= BirdAngle+5;
+       BirdYPos:= Max(BirdAngle,1)/BIRD_DOWN_SPEED;
+      end;
+
+      if FGameTicker mod 4 = 0 then
+       Flap:= true
+      else
+       Flap:= false;
+
+      Sleep(35);
     end;
-
-    if FGameTicker = 0 then
-    begin
-     //PipeRange:= (GamePanelSize.Height - TPipe.Size.Height);
-     GapSize:= RandomRange(MIN_GAP_SIZE,MAX_GAP_SIZE);
-     YMinOff:= Round(GamePanelSize.Height-(GamePanelSize.Height - GapSize/2));
-     YMaxOff:= Round(GamePanelSize.Height - GapSize);
-     YOff:= RandomRange(YMinOff,YMaxOff);
-
-     FPipeAPos:= Round((YOff-TPipe.Size.Height)-(GapSize/2));
-     FPipeBPos:= YOff+Round(GapSize/2);
-
-     FAddPipe(FPipeAPos,false);
-     FAddPipe(FPipeBPos,true);
-    end;
-
-    if FGameTicker>(SPAWN_TIME*30) then
-     FGameTicker:= 0
-    else
-     Inc(FGameTicker);
-
-     // for a smooth rising
-    if IsBirdUp and (BirdUpCount <= BIRD_UP_SPEED)then
-    begin
-     if BirdAngle > -15 then
-      BirdAngle:= BirdAngle-(90/(BIRD_UP_SPEED));
-     BirdYPos:= -Round(BIRD_UP_HEIGHT/BIRD_UP_SPEED);
-     Inc(BirdUpCount);
-    end
-    else
-    begin
-     IsBirdUp:= false;
-     BirdUpCount:= 0;
-
-     if BirdAngle<90 then
-      BirdAngle:= BirdAngle+5;
-     BirdYPos:= Max(BirdAngle,1)/BIRD_DOWN_SPEED;
-    end;
-
-    if FGameTicker mod 4 = 0 then
-     Flap:= true
-    else
-     Flap:= false;
-
-    Sleep(35);
-   end;
   end;
 end;
 

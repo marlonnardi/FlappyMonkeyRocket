@@ -1939,10 +1939,10 @@ object MenuForm: TMenuForm
   object LogoLBL: TLabel
     Align = Top
     StyledSettings = []
-    Margins.Top = 50.000000000000000000
-    Position.Y = 50.000000000000000000
+    Margins.Top = 40.000000000000000000
+    Position.Y = 40.000000000000000000
     Size.Width = 347.000000000000000000
-    Size.Height = 150.000000000000000000
+    Size.Height = 111.000000000000000000
     Size.PlatformDefault = False
     TextSettings.Font.Family = '04b_19'
     TextSettings.Font.Size = 48.000000000000000000

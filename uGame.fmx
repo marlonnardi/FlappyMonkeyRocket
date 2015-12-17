@@ -716,9 +716,8 @@ object GameForm: TGameForm
     Size.Height = 561.000000000000000000
     Size.PlatformDefault = False
     inherited GameOverLayout: TLayout
-      Margins.Top = 50.000000000000000000
       Size.Width = 347.000000000000000000
-      Size.Height = 416.000000000000000000
+      Size.Height = 466.000000000000000000
       inherited layGameTop: TLayout
         Size.Width = 347.000000000000000000
         inherited GameOverLBL: TLabel
@@ -1923,8 +1922,8 @@ object GameForm: TGameForm
   object Timer: TTimer
     Interval = 100
     OnTimer = TimerTimer
-    Left = 273
-    Top = 328
+    Left = 305
+    Top = 392
   end
   object GroundLayout: TLayout
     Align = Bottom

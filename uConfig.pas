@@ -59,8 +59,6 @@ begin
     Result  := TAlphaColorRec.Blueviolet;
   if Points >= 400 then
     Result  := TAlphaColorRec.Black;
-
-  Result  := TAlphaColorRec.Blueviolet;
 end;
 
 { TSingletonConfig }

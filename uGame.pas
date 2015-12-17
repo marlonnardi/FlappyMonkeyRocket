@@ -118,8 +118,8 @@ begin
   MyGameOverFrame.BestScoreLBL.TextSettings.FontColor :=
     FSingletonConfig.GetColorPoints(ABestScore);
 
-  MyGameOverFrame.GOScoreLBL.Text:= '202';//IntToStr(AScore);
-  MyGameOverFrame.BestScoreLbl.Text:= '202';//IntToStr(ABestScore);
+  MyGameOverFrame.GOScoreLBL.Text:= IntToStr(AScore);
+  MyGameOverFrame.BestScoreLbl.Text:= IntToStr(ABestScore);
   MyGameOverFrame.BringToFront;
   MyGameOverFrame.Visible:= True;
   ScoreLBL.Visible:= False;

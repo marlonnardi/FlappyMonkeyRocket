@@ -52,7 +52,8 @@ begin
     Exit;
 
   case FSom of
-    Wing: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim + 'sfx_wing.mp3';
+    //Wing: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim + 'sfx_wing.mp3';
+    Wing: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim + 'foguete_acelera.mp3';
     Pointer: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim +  'sfx_point.mp3';
     Swooshing: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim +  'sfx_swooshing.mp3';
     Hit: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim +  'sfx_hit.mp3';

@@ -1,0 +1,7 @@
+.\assets\internal\sfx_die.mp3
+.\assets\internal\sfx_swooshing.mp3
+.\assets\internal\foguete_acelera.mp3
+.\assets\internal\sfx_point.mp3
+.\assets\internal\04B_19.TTF
+.\assets\internal\sfx_wing.mp3
+.\assets\internal\sfx_hit.mp3

@@ -5,7 +5,8 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Objects, FMX.Ani, FMX.Layouts, FMX.Controls.Presentation, FMX.Advertising;
+  FMX.Objects, FMX.Ani, FMX.Layouts, FMX.Controls.Presentation, FMX.Advertising,
+  FMX.Effects;
 
 type
   TGameOverFrame = class(TFrame)
@@ -35,6 +36,7 @@ type
     imgMedal3: TImage;
     CircleMedal4: TCircle;
     imgMedal4: TImage;
+    GlowEffect3: TGlowEffect;
   private
     { Private declarations }
   public

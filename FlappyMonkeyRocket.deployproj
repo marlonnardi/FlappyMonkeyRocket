@@ -327,6 +327,24 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Imagens\splash_960.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-xlarge\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage960</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Sons\sfx_die.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
+            <RemoteName>fire_die.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="Imagens\splash_426.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>FlappyMonkeyRocket\res\drawable-small\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
@@ -336,18 +354,9 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Sons\sfx_die.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
-            <RemoteName>sfx_die.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="Sons\sfx_swooshing.mp3" Condition="'$(Config)'=='Debug'">
             <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
-            <RemoteName>sfx_swooshing.mp3</RemoteName>
+            <RemoteName>fire_swooshing.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
@@ -372,10 +381,10 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmxblue48.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyMonkeyRocket\res\drawable-mdpi\</RemoteDir>
+        <DeployFile Include="Imagens\flappybirdfmxblue96.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-xhdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <DeployClass>Android_LauncherIcon96</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -399,15 +408,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmxblue36.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyMonkeyRocket\res\drawable-ldpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon36</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="Imagens\splash_960.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyMonkeyRocket\res\drawable-xlarge\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
@@ -416,6 +416,16 @@
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Debug\libFlappyMonkeyRocket.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libFlappyMonkeyRocket.so</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
         </DeployFile>
         <DeployFile Include="Android\Debug\AndroidManifest.xml" Condition="'$(Config)'=='Debug'">
             <RemoteDir>FlappyMonkeyRocket\</RemoteDir>
@@ -435,15 +445,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmxblue144.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyMonkeyRocket\res\drawable-xxhdpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon144</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyMonkeyRocket\library\lib\mips\</RemoteDir>
             <RemoteName>libFlappyBird.so</RemoteName>
@@ -453,20 +454,10 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Android\Debug\libFlappyMonkeyRocket.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyMonkeyRocket\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libFlappyMonkeyRocket.so</RemoteName>
-            <DeployClass>ProjectOutput</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-            <Required>True</Required>
-        </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmxblue72.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyMonkeyRocket\res\drawable-hdpi\</RemoteDir>
+        <DeployFile Include="Imagens\flappybirdfmxblue36.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-ldpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon72</DeployClass>
+            <DeployClass>Android_LauncherIcon36</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -474,7 +465,7 @@
         </DeployFile>
         <DeployFile Include="Sons\foguete_acelera.mp3" Condition="'$(Config)'=='Debug'">
             <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
-            <RemoteName>foguete_acelera.mp3</RemoteName>
+            <RemoteName>fire_wing.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
@@ -483,9 +474,18 @@
         </DeployFile>
         <DeployFile Include="Sons\sfx_point.mp3" Condition="'$(Config)'=='Debug'">
             <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
-            <RemoteName>sfx_point.mp3</RemoteName>
+            <RemoteName>fire_point.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Imagens\flappybirdfmxblue144.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon144</DeployClass>
+            <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -528,7 +528,7 @@
         </DeployFile>
         <DeployFile Include="Sons\sfx_swooshing.mp3" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
-            <RemoteName>sfx_swooshing.mp3</RemoteName>
+            <RemoteName>fire_swooshing.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
@@ -572,18 +572,9 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\splash_960.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyMonkeyRocket\res\drawable-xlarge\</RemoteDir>
-            <RemoteName>splash_image.png</RemoteName>
-            <DeployClass>Android_SplashImage960</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="Sons\sfx_wing.mp3" Condition="'$(Config)'=='Debug'">
             <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
-            <RemoteName>sfx_wing.mp3</RemoteName>
+            <RemoteName>fire_wing.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
@@ -592,7 +583,7 @@
         </DeployFile>
         <DeployFile Include="Sons\sfx_point.mp3" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
-            <RemoteName>sfx_point.mp3</RemoteName>
+            <RemoteName>fire_point.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
@@ -619,9 +610,18 @@
         </DeployFile>
         <DeployFile Include="Sons\foguete_acelera.mp3" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
-            <RemoteName>foguete_acelera.mp3</RemoteName>
+            <RemoteName>fire_wing.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Imagens\flappybirdfmxblue72.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon72</DeployClass>
+            <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -644,10 +644,10 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmxblue96.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyMonkeyRocket\res\drawable-xhdpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon96</DeployClass>
+        <DeployFile Include="Android\Debug\styles.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\values\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStyles</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -657,15 +657,6 @@
             <RemoteDir>FlappyMonkeyRocket\res\drawable-ldpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon36</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Android\Debug\styles.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyMonkeyRocket\res\values\</RemoteDir>
-            <RemoteName>styles.xml</RemoteName>
-            <DeployClass>AndroidSplashStyles</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -682,16 +673,25 @@
         </DeployFile>
         <DeployFile Include="Sons\sfx_die.mp3" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
-            <RemoteName>sfx_die.mp3</RemoteName>
+            <RemoteName>fire_die.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Imagens\flappybirdfmxblue48.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="Sons\sfx_wing.mp3" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
-            <RemoteName>sfx_wing.mp3</RemoteName>
+            <RemoteName>fire_wing.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
@@ -711,15 +711,6 @@
             <RemoteDir>FlappyMonkeyRocket\library\lib\x86\</RemoteDir>
             <RemoteName>libBirdsFlappy.so</RemoteName>
             <DeployClass>AndroidLibnativeX86File</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Imagens\splash_470.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyMonkeyRocket\res\drawable-normal\</RemoteDir>
-            <RemoteName>splash_image.png</RemoteName>
-            <DeployClass>Android_SplashImage470</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -747,6 +738,15 @@
             <RemoteDir>FlappyMonkeyRocket\res\drawable-xxhdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon144</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Imagens\splash_470.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-normal\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage470</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -781,7 +781,7 @@
         </DeployFile>
         <DeployFile Include="Sons\sfx_hit.mp3" Condition="'$(Config)'=='Debug'">
             <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
-            <RemoteName>sfx_hit.mp3</RemoteName>
+            <RemoteName>fire_hit.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
@@ -790,7 +790,7 @@
         </DeployFile>
         <DeployFile Include="Sons\sfx_hit.mp3" Condition="'$(Config)'=='Release'">
             <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
-            <RemoteName>sfx_hit.mp3</RemoteName>
+            <RemoteName>fire_hit.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>

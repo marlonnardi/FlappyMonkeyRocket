@@ -4,7 +4,7 @@ object MenuForm: TMenuForm
   BorderStyle = Single
   Caption = 'Flappy Bird'
   ClientHeight = 745
-  ClientWidth = 650
+  ClientWidth = 448
   Fill.Color = xFF5AA6FA
   Fill.Kind = Solid
   Quality = HighPerformance
@@ -16,7 +16,7 @@ object MenuForm: TMenuForm
   DesignerMasterStyle = 3
   object layPrincipal: TLayout
     Align = Client
-    Size.Width = 400.000000000000000000
+    Size.Width = 448.000000000000000000
     Size.Height = 745.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
@@ -25,7 +25,7 @@ object MenuForm: TMenuForm
       Fill.Color = xFFDCCAA8
       HitTest = False
       Position.Y = 531.000000000000000000
-      Size.Width = 400.000000000000000000
+      Size.Width = 448.000000000000000000
       Size.Height = 95.000000000000000000
       Size.PlatformDefault = False
       Stroke.Kind = None
@@ -755,7 +755,7 @@ object MenuForm: TMenuForm
         end>
       Align = Bottom
       Position.Y = 507.000000000000000000
-      Size.Width = 400.000000000000000000
+      Size.Width = 448.000000000000000000
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
       WrapMode = Center
@@ -5502,7 +5502,7 @@ object MenuForm: TMenuForm
         end>
       Align = Contents
       HitTest = False
-      Size.Width = 400.000000000000000000
+      Size.Width = 448.000000000000000000
       Size.Height = 745.000000000000000000
       Size.PlatformDefault = False
       WrapMode = Stretch
@@ -6232,7 +6232,7 @@ object MenuForm: TMenuForm
         end>
       Align = MostBottom
       Position.Y = 626.000000000000000000
-      Size.Width = 400.000000000000000000
+      Size.Width = 448.000000000000000000
       Size.Height = 24.000000000000000000
       Size.PlatformDefault = False
       WrapMode = Center
@@ -6242,7 +6242,7 @@ object MenuForm: TMenuForm
       StyledSettings = []
       Margins.Top = 30.000000000000000000
       Position.Y = 78.000000000000000000
-      Size.Width = 400.000000000000000000
+      Size.Width = 448.000000000000000000
       Size.Height = 111.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Family = '04b_19'
@@ -7738,7 +7738,7 @@ object MenuForm: TMenuForm
       Margins.Bottom = 10.000000000000000000
       Position.X = 20.000000000000000000
       Position.Y = 455.000000000000000000
-      Size.Width = 360.000000000000000000
+      Size.Width = 408.000000000000000000
       Size.Height = 42.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'buttonstyle'
@@ -7754,13 +7754,13 @@ object MenuForm: TMenuForm
       Fill.Color = xFFDCCAA8
       HitTest = False
       Position.Y = 650.000000000000000000
-      Size.Width = 400.000000000000000000
+      Size.Width = 448.000000000000000000
       Size.Height = 95.000000000000000000
       Size.PlatformDefault = False
       Stroke.Kind = None
     end
     object tlbControle: TToolBar
-      Size.Width = 400.000000000000000000
+      Size.Width = 448.000000000000000000
       Size.Height = 48.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 7
@@ -7774,12 +7774,11 @@ object MenuForm: TMenuForm
         StyleLookup = 'detailstoolbutton'
         TabOrder = 0
         Text = 'btnMenu'
-        Visible = False
       end
       object btnFechar: TButton
         Align = Right
         Margins.Right = 10.000000000000000000
-        Position.X = 362.000000000000000000
+        Position.X = 410.000000000000000000
         Position.Y = 10.000000000000000000
         Size.Width = 28.000000000000000000
         Size.Height = 28.000000000000000000
@@ -7787,15 +7786,16 @@ object MenuForm: TMenuForm
         StyleLookup = 'cleareditbutton'
         TabOrder = 1
         Text = 'btnFechar'
+        OnClick = btnFecharClick
       end
     end
   end
   object MultiView1: TMultiView
     MasterButton = btnMenu
-    Mode = Panel
     Size.Width = 250.000000000000000000
     Size.Height = 745.000000000000000000
     Size.PlatformDefault = False
+    Visible = False
     TabOrder = 1
     object pnlTop: TPanel
       Align = Top

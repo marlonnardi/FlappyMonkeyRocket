@@ -36,6 +36,7 @@ type
     procedure PlayBTNClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure swtchSomSwitch(Sender: TObject);
+    procedure btnFecharClick(Sender: TObject);
   private
     { Private declarations }
 
@@ -54,10 +55,16 @@ implementation
 
 uses uGame, uDmStyle;
 
+procedure TMenuForm.btnFecharClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
 procedure TMenuForm.FormCreate(Sender: TObject);
 begin
 {$IFDEF MSWINDOWS}
   BorderStyle := TFmxFormBorderStyle.bsSizeable;
+  MultiView1.Visible  := False;
 {$ELSE}
   // BorderStyle:= TFmxFormBorderStyle.None; {BUG}
 

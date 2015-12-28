@@ -7,7 +7,7 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Objects, FMX.Ani, FMX.Effects, FMX.Platform,
-  FMX.Controls.Presentation, uConfig;
+  FMX.Controls.Presentation, uConfig, FMX.MultiView, FMX.Layouts, FMX.ListBox;
 
 type
   TMenuForm = class(TForm)
@@ -23,6 +23,16 @@ type
     FloatAnimation1: TFloatAnimation;
     swtchSom: TSwitch;
     lblPropaganda: TLabel;
+    layPrincipal: TLayout;
+    tlbControle: TToolBar;
+    btnMenu: TButton;
+    btnFechar: TButton;
+    MultiView1: TMultiView;
+    pnlTop: TPanel;
+    pnlBottom: TPanel;
+    imgMonkey: TImage;
+    lstMenu: TListBox;
+    lstItem1: TListBoxItem;
     procedure PlayBTNClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure swtchSomSwitch(Sender: TObject);

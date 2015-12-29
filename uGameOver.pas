@@ -24,7 +24,6 @@ type
     GOScoreLBL: TLabel;
     RectangleMeda: TRectangle;
     lbl3: TLabel;
-    BannerAd1: TBannerAd;
     CircleMedal: TCircle;
     imgMedal: TImage;
     CircleMedal1: TCircle;

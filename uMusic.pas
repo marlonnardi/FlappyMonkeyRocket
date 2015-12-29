@@ -60,7 +60,7 @@ begin
   end;
 
   FMediaPlayer.Play;
-  Sleep(1000);
+  Sleep(1500);
 end;
 
 end.

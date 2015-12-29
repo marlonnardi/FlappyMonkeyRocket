@@ -33,6 +33,8 @@ type
     imgMonkey: TImage;
     lstMenu: TListBox;
     lstItem1: TListBoxItem;
+    lblTitulo: TLabel;
+    GlowEffect1: TGlowEffect;
     procedure PlayBTNClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure swtchSomSwitch(Sender: TObject);
@@ -57,7 +59,7 @@ uses uGame, uDmStyle;
 
 procedure TMenuForm.btnFecharClick(Sender: TObject);
 begin
-  Application.Terminate;
+  Self.Close;
 end;
 
 procedure TMenuForm.FormCreate(Sender: TObject);

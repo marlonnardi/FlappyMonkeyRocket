@@ -17,8 +17,8 @@ object GameOverFrame: TGameOverFrame
       object GameOverLBL: TLabel
         Align = Top
         StyledSettings = []
-        Margins.Top = 5.000000000000000000
-        Position.Y = 105.000000000000000000
+        Margins.Top = 75.000000000000000000
+        Position.Y = 75.000000000000000000
         Size.Width = 330.000000000000000000
         Size.Height = 45.000000000000000000
         Size.PlatformDefault = False
@@ -172,7 +172,7 @@ object GameOverFrame: TGameOverFrame
         Size.Width = 22.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
-        Stroke.Color = claCornflowerblue
+        Stroke.Color = claYellow
         Stroke.Thickness = 0.000000000000000000
         Stroke.Dash = Custom
         object imgMedal2: TImage
@@ -1083,7 +1083,7 @@ object GameOverFrame: TGameOverFrame
         Size.Width = 22.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
-        Stroke.Color = claCornflowerblue
+        Stroke.Color = claBlueviolet
         Stroke.Thickness = 0.000000000000000000
         Stroke.Dash = Custom
         object imgMedal3: TImage
@@ -2880,11 +2880,6 @@ object GameOverFrame: TGameOverFrame
           Size.PlatformDefault = False
         end
       end
-      object BannerAd1: TBannerAd
-        Align = MostTop
-        Margins.Top = 50.000000000000000000
-        Position.Y = 50.000000000000000000
-      end
       object GlowEffect3: TGlowEffect
         Softness = 0.400000005960464500
         GlowColor = claGold
@@ -2894,7 +2889,7 @@ object GameOverFrame: TGameOverFrame
         Fill.Kind = Gradient
         Fill.Gradient.Points = <
           item
-            Color = xFF8DB71F
+            Color = claLime
             Offset = 0.000000000000000000
           end
           item
@@ -2907,7 +2902,7 @@ object GameOverFrame: TGameOverFrame
         Size.Width = 22.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
-        Stroke.Color = claCornflowerblue
+        Stroke.Color = claChartreuse
         Stroke.Thickness = 0.000000000000000000
         Stroke.Dash = Custom
         object imgMedal1: TImage

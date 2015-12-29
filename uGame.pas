@@ -29,6 +29,7 @@ type
     MyGameOverFrame: TGameOverFrame;
     Timer: TTimer;
     GroundLayout: TLayout;
+    BannerAd: TBannerAd;
     procedure FormCreate(Sender: TObject);
     procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
@@ -110,7 +111,7 @@ end;
 procedure TGameForm.GameOver(AScore, ABestScore: Integer);
 begin
   {Propaganda}
-  Propaganda(MyGameOverFrame.BannerAd1, 'ca-app-pub-4608094404416880/8453766253');
+  Propaganda(Self.BannerAd, 'ca-app-pub-4608094404416880/8453766253');
 
   {Cores}
   MyGameOverFrame.CircleMedal.Fill.Color :=
@@ -162,7 +163,7 @@ procedure TGameForm.MyGameOverFrameOKBTNClick(Sender: TObject);
 begin
   MyGameOverFrame.Position.Y := GameForm.Height;
   MyGameOverFrame.Visible := False;
-  PropagandaEsconde(MyGameOverFrame.BannerAd1);
+  PropagandaEsconde(Self.BannerAd);
 
   GameForm.Close;
   MenuForm.Show;
@@ -172,8 +173,7 @@ procedure TGameForm.MyGameOverFrameReplayBTNClick(Sender: TObject);
 begin
   MyGameOverFrame.Position.Y := GameForm.Height;
   MyGameOverFrame.Visible:= False;
-  PropagandaEsconde(MyGameOverFrame.BannerAd1);
-  Propaganda(MyReadyFrame.BannerAd1, 'ca-app-pub-4608094404416880/8453766253');
+  Propaganda(Self.BannerAd, 'ca-app-pub-4608094404416880/8453766253');
 
   MyReadyFrame.Visible:= True;
   FController.Replay;
@@ -265,7 +265,7 @@ end;
 procedure TGameForm.GetReadyLayoutClick(Sender: TObject);
 begin
   MyReadyFRame.Visible:= False;
-  PropagandaEsconde(MyReadyFrame.BannerAd1);
+  PropagandaEsconde(Self.BannerAd);
   ScoreLBL.Visible:= True;
   FController.StartGame;
 end;
@@ -274,9 +274,8 @@ procedure TGameForm.Run;
 begin
   FController.Replay;
   MyGameOverFrame.Visible:= False;
-  PropagandaEsconde(MyGameOverFrame.BannerAd1);
 
-  Propaganda(MyReadyFrame.BannerAd1, 'ca-app-pub-4608094404416880/8453766253');
+  Propaganda(Self.BannerAd, 'ca-app-pub-4608094404416880/8453766253');
 
   MyReadyFrame.Visible:= True;
 end;

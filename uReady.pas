@@ -11,7 +11,6 @@ uses
 type
   TReadyFrame = class(TFrame)
     GetReadyLayout: TLayout;
-    BannerAd1: TBannerAd;
     layReady: TLayout;
     GetReadyLBL: TLabel;
     FloatAnimation1: TFloatAnimation;
@@ -22,7 +21,8 @@ type
     Pie1: TPie;
     Rectangle2: TRectangle;
     imgTap: TImage;
-    btnTap: TButton;
+    Rectangle1: TRectangle;
+    lblTap: TLabel;
   private
     { Private declarations }
   public

@@ -3,10 +3,9 @@ unit uGameOver;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
-  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Objects, FMX.Ani, FMX.Layouts, FMX.Controls.Presentation, FMX.Advertising,
-  FMX.Effects;
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.StdCtrls, FMX.Effects, FMX.Advertising, FMX.Objects, FMX.Ani, FMX.Forms,
+  FMX.Controls, FMX.Controls.Presentation, FMX.Types, FMX.Layouts;
 
 type
   TGameOverFrame = class(TFrame)

@@ -27,7 +27,7 @@ type
     tlbControle: TToolBar;
     btnMenu: TButton;
     btnFechar: TButton;
-    MultiView1: TMultiView;
+    MultiView: TMultiView;
     pnlTop: TPanel;
     pnlBottom: TPanel;
     imgMonkey: TImage;

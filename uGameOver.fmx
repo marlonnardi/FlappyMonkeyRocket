@@ -37,7 +37,7 @@ object GameOverFrame: TGameOverFrame
       end
       object RectangleScore: TRectangle
         Align = Bottom
-        Fill.Color = claBurlywood
+        Fill.Color = claWhite
         HitTest = False
         Margins.Left = 10.000000000000000000
         Margins.Right = 10.000000000000000000
@@ -52,7 +52,7 @@ object GameOverFrame: TGameOverFrame
         YRadius = 10.000000000000000000
         object RectangleTotal: TRectangle
           Align = Right
-          Fill.Color = claBurlywood
+          Fill.Color = claWhite
           HitTest = False
           Margins.Top = 5.000000000000000000
           Margins.Right = 5.000000000000000000
@@ -125,7 +125,7 @@ object GameOverFrame: TGameOverFrame
         end
         object RectangleMeda: TRectangle
           Align = Left
-          Fill.Color = claBurlywood
+          Fill.Color = claWhite
           HitTest = False
           Margins.Left = 5.000000000000000000
           Margins.Top = 5.000000000000000000
@@ -1977,8 +1977,8 @@ object GameOverFrame: TGameOverFrame
         Fill.Kind = Gradient
         Fill.Gradient.Points = <
           item
-            Color = xFFD81F1F
-            Offset = 0.000000000000000000
+            Color = xFF3B6BD6
+            Offset = 0.083850935101509090
           end
           item
             Color = claWhite

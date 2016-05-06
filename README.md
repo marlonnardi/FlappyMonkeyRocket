@@ -1,4 +1,4 @@
-# FlappyBirdFMX
+# FlappyMonkeyRocket
 
 ## Sobre
 

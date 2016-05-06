@@ -15,8 +15,7 @@
 ## Screenshots
 
 
-![Jogo](Imagens/Screenshot_2015-12-17-10-23-26.png)
-![Fases](Imagens/Screenshot_2015-12-17-10-23-36.png)
-![Fases](Imagens/Screenshot_2015-12-17-10-24-00.png)
-![Fases](Imagens/Screenshot_2015-12-17-10-24-48.png)
-![Fases](Imagens/Screenshot_2015-12-17-10-28-10.png)
+![Jogo](Imagens/flappymonkeyrocket144.png)
+![Fases](Imagens/Screenshot_20160506-161025.png)
+![Fases](Imagens/Screenshot_20160506-161036.png)
+![Fases](Imagens/Screenshot_20160506-161016.png)

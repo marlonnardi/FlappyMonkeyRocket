@@ -7,7 +7,7 @@
     <ItemGroup Condition="'$(Platform)'=='Win64'"/>
     <ItemGroup Condition="'$(Platform)'=='iOSDevice32'">
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_50x50.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_SpotlightSearchIcon_50x50.png</RemoteName>
             <DeployClass>iPad_SpotLight50</DeployClass>
             <Operation>0</Operation>
@@ -16,7 +16,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_SpotlightSearchIcon_40x40.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_SpotlightSearchIcon_40x40.png</RemoteName>
             <DeployClass>iPhone_Spotlight40</DeployClass>
             <Operation>0</Operation>
@@ -25,7 +25,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_640x1136.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>Default-568h@2x.png</RemoteName>
             <DeployClass>iPhone_Launch640x1136</DeployClass>
             <Operation>1</Operation>
@@ -34,7 +34,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImageLandscape_1024x768.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>Default-Landscape~ipad.png</RemoteName>
             <DeployClass>iPad_Launch1024x768</DeployClass>
             <Operation>0</Operation>
@@ -43,7 +43,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="iOSDevice32\Release\ResourceRules.plist" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>ResourceRules.plist</RemoteName>
             <DeployClass>ProjectiOSDeviceResourceRules</DeployClass>
             <Operation>1</Operation>
@@ -52,7 +52,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_80x80.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_SpotlightSearchIcon_80x80.png</RemoteName>
             <DeployClass>iPad_SpotLight80</DeployClass>
             <Operation>0</Operation>
@@ -61,7 +61,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_57x57.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_57x57.png</RemoteName>
             <DeployClass>iPhone_AppIcon57</DeployClass>
             <Operation>0</Operation>
@@ -70,7 +70,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SettingIcon_58x58.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_SettingIcon_58x58.png</RemoteName>
             <DeployClass>iPad_Setting58</DeployClass>
             <Operation>0</Operation>
@@ -78,29 +78,10 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="iOSDevice32\Release\FlappyBirdFMX" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
-            <RemoteName>FlappyBirdFMX</RemoteName>
-            <DeployClass>ProjectOutput</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-            <Required>True</Required>
-        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_152x152.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_152x152.png</RemoteName>
             <DeployClass>iPad_AppIcon152</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_768x1024.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
-            <RemoteName>Default-Portrait~ipad.png</RemoteName>
-            <DeployClass>iPad_Launch768x1024</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -115,8 +96,17 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_768x1024.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
+            <RemoteName>Default-Portrait~ipad.png</RemoteName>
+            <DeployClass>iPad_Launch768x1024</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_320x480.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>Default.png</RemoteName>
             <DeployClass>iPhone_Launch320</DeployClass>
             <Operation>1</Operation>
@@ -125,7 +115,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_100x100.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_SpotlightSearchIcon_100x100.png</RemoteName>
             <DeployClass>iPad_SpotLight100</DeployClass>
             <Operation>0</Operation>
@@ -134,7 +124,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_144x144.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_144x144.png</RemoteName>
             <DeployClass>iPad_AppIcon144</DeployClass>
             <Operation>0</Operation>
@@ -142,8 +132,18 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="iOSDevice32\Release\FlappyMonkeyRocket" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
+            <RemoteName>FlappyMonkeyRocket</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SettingIcon_29x29.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_SettingIcon_29x29.png</RemoteName>
             <DeployClass>iPad_Setting29</DeployClass>
             <Operation>0</Operation>
@@ -152,7 +152,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_1536x2008.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>Default-Portrait@2x.png</RemoteName>
             <DeployClass>iPad_Launch1536</DeployClass>
             <Operation>1</Operation>
@@ -161,7 +161,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImageLandscape_1024x748.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>Default-Landscape.png</RemoteName>
             <DeployClass>iPad_Launch1024</DeployClass>
             <Operation>1</Operation>
@@ -170,7 +170,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_40x40.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_SpotlightSearchIcon_40x40.png</RemoteName>
             <DeployClass>iPad_SpotLight40</DeployClass>
             <Operation>0</Operation>
@@ -179,7 +179,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_76x76.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_76x76.png</RemoteName>
             <DeployClass>iPad_AppIcon76</DeployClass>
             <Operation>0</Operation>
@@ -188,7 +188,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImageLandscape_2048x1536.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>Default-Landscape@2x~ipad.png</RemoteName>
             <DeployClass>iPad_Launch2048x1536</DeployClass>
             <Operation>0</Operation>
@@ -197,7 +197,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_114x114.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_114x114.png</RemoteName>
             <DeployClass>iPhone_AppIcon114</DeployClass>
             <Operation>0</Operation>
@@ -206,7 +206,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_120x120.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_120x120.png</RemoteName>
             <DeployClass>iPhone_AppIcon120</DeployClass>
             <Operation>0</Operation>
@@ -215,7 +215,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_768x1004.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>Default~ipad.png</RemoteName>
             <DeployClass>iPad_Launch768</DeployClass>
             <Operation>1</Operation>
@@ -224,7 +224,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_60x60.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_60x60.png</RemoteName>
             <DeployClass>iPhone_AppIcon60</DeployClass>
             <Operation>0</Operation>
@@ -233,7 +233,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_SpotlightSearchIcon_29x29.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_SpotlightSearchIcon_29x29.png</RemoteName>
             <DeployClass>iPhone_Spotlight29</DeployClass>
             <Operation>0</Operation>
@@ -242,7 +242,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="iOSDevice32\Release\FlappyBird.entitlements" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\../\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\../\</RemoteDir>
             <RemoteName>Entitlements.plist</RemoteName>
             <DeployClass>ProjectiOSEntitlements</DeployClass>
             <Operation>1</Operation>
@@ -251,7 +251,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_640x960.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>Default@2x.png</RemoteName>
             <DeployClass>iPhone_Launch640</DeployClass>
             <Operation>1</Operation>
@@ -260,7 +260,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImageLandscape_2048x1496.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>Default-Landscape@2x.png</RemoteName>
             <DeployClass>iPad_Launch2048</DeployClass>
             <Operation>1</Operation>
@@ -269,7 +269,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="iOSDevice32\Release\FlappyBird.info.plist" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>Info.plist</RemoteName>
             <DeployClass>ProjectiOSDeviceInfoPList</DeployClass>
             <Operation>1</Operation>
@@ -278,7 +278,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_72x72.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_72x72.png</RemoteName>
             <DeployClass>iPad_AppIcon72</DeployClass>
             <Operation>0</Operation>
@@ -287,7 +287,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImagePortrait_1536x2048.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>Default-Portrait@2x~ipad.png</RemoteName>
             <DeployClass>iPad_Launch1536x2048</DeployClass>
             <Operation>0</Operation>
@@ -299,7 +299,7 @@
     <ItemGroup Condition="'$(Platform)'=='Win32'"/>
     <ItemGroup Condition="'$(Platform)'=='OSX32'">
         <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
-            <RemoteDir>FlappyBirdFMX.app\Contents\MacOS\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\Contents\MacOS\</RemoteDir>
             <RemoteName>libcgunwind.1.0.dylib</RemoteName>
             <DeployClass>DependencyModule</DeployClass>
             <Operation>1</Operation>
@@ -310,7 +310,7 @@
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='Android'">
         <DeployFile Include="Android\Release\splash_image_def.xml" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\res\drawable\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\res\drawable\</RemoteDir>
             <RemoteName>splash_image_def.xml</RemoteName>
             <DeployClass>AndroidSplashImageDef</DeployClass>
             <Operation>1</Operation>
@@ -318,8 +318,8 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\splash_640.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-large\</RemoteDir>
+        <DeployFile Include="Imagens\monkey\splash_640.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-large\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage640</DeployClass>
             <Operation>1</Operation>
@@ -327,8 +327,26 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-small\</RemoteDir>
+        <DeployFile Include="Sons\fire_hit.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
+            <RemoteName>fire_hit.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Sons\fire_point.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
+            <RemoteName>fire_point.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Imagens\monkey\splash_426.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-small\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage426</DeployClass>
             <Operation>1</Operation>
@@ -336,53 +354,44 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Sons\sfx_die.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
-            <RemoteName>sfx_die.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
+        <DeployFile Include="Imagens\monkey\flappymonkeyrocket72.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon72</DeployClass>
+            <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Sons\sfx_swooshing.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
-            <RemoteName>sfx_swooshing.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
+        <DeployFile Include="Imagens\monkey\flappymonkeyrocket48.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\splash_426.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-small\</RemoteDir>
+        <DeployFile Include="Imagens\monkey\flappymonkeyrocket48.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Imagens\monkey\splash_960.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-xlarge\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
-            <DeployClass>Android_SplashImage426</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmxblue48.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-mdpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon48</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmx48.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-mdpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <DeployClass>Android_SplashImage960</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\library\lib\mips\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\library\lib\mips\</RemoteDir>
             <RemoteName>libFlappyBird.so</RemoteName>
             <DeployClass>AndroidLibnativeMipsFile</DeployClass>
             <Operation>1</Operation>
@@ -391,7 +400,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android\Debug\splash_image_def.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\res\drawable\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\res\drawable\</RemoteDir>
             <RemoteName>splash_image_def.xml</RemoteName>
             <DeployClass>AndroidSplashImageDef</DeployClass>
             <Operation>1</Operation>
@@ -399,17 +408,8 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmx36.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-ldpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon36</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Imagens\splash_960.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-xlarge\</RemoteDir>
+        <DeployFile Include="Imagens\monkey\splash_960.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-xlarge\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage960</DeployClass>
             <Operation>1</Operation>
@@ -417,8 +417,18 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Android\Debug\libFlappyMonkeyRocket.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libFlappyMonkeyRocket.so</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
         <DeployFile Include="Android\Debug\AndroidManifest.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\</RemoteDir>
             <RemoteName>AndroidManifest.xml</RemoteName>
             <DeployClass>ProjectAndroidManifest</DeployClass>
             <Operation>1</Operation>
@@ -427,7 +437,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\armeabi\libnative-activity.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\library\lib\armeabi\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\library\lib\armeabi\</RemoteDir>
             <RemoteName>libFlappyBird.so</RemoteName>
             <DeployClass>AndroidLibnativeArmeabiFile</DeployClass>
             <Operation>1</Operation>
@@ -435,17 +445,17 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmx144.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-xxhdpi\</RemoteDir>
+        <DeployFile Include="Imagens\monkey\flappymonkeyrocket36.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-ldpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon144</DeployClass>
+            <DeployClass>Android_LauncherIcon36</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\library\lib\mips\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\library\lib\mips\</RemoteDir>
             <RemoteName>libFlappyBird.so</RemoteName>
             <DeployClass>AndroidLibnativeMipsFile</DeployClass>
             <Operation>1</Operation>
@@ -453,36 +463,17 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmx72.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-hdpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon72</DeployClass>
+        <DeployFile Include="Imagens\monkey\splash_470.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-normal\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage470</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Sons\sfx_point.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
-            <RemoteName>sfx_point.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Android\Debug\libFlappyBirdFMX.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libFlappyBirdFMX.so</RemoteName>
-            <DeployClass>ProjectOutput</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-            <Required>True</Required>
         </DeployFile>
         <DeployFile Include="c:\program files (x86)\embarcadero\rad studio\12.0\lib\android\debug\classes.dex" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\classes\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\classes\</RemoteDir>
             <RemoteName>classes.dex</RemoteName>
             <DeployClass>AndroidClassesDexFile</DeployClass>
             <Operation>1</Operation>
@@ -491,7 +482,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\x86\libnative-activity.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\library\lib\x86\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\library\lib\x86\</RemoteDir>
             <RemoteName>libFlappyBird.so</RemoteName>
             <DeployClass>AndroidLibnativeX86File</DeployClass>
             <Operation>1</Operation>
@@ -499,8 +490,17 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Imagens\monkey\splash_640.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-large\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage640</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="Android\Release\classes.dex" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\classes\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\classes\</RemoteDir>
             <RemoteName>classes.dex</RemoteName>
             <DeployClass>AndroidClassesDexFile</DeployClass>
             <Operation>1</Operation>
@@ -509,7 +509,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android\Release\styles.xml" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\res\values\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\res\values\</RemoteDir>
             <RemoteName>styles.xml</RemoteName>
             <DeployClass>AndroidSplashStyles</DeployClass>
             <Operation>1</Operation>
@@ -517,27 +517,9 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Sons\sfx_swooshing.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
-            <RemoteName>sfx_swooshing.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Fonts\04B_19.TTF" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
-            <RemoteName>04B_19.TTF</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Android\Release\libFlappyBirdFMX.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libFlappyBirdFMX.so</RemoteName>
+        <DeployFile Include="Android\Release\libFlappyMonkeyRocket.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libFlappyMonkeyRocket.so</RemoteName>
             <DeployClass>ProjectOutput</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
@@ -545,8 +527,26 @@
             <Overwrite>True</Overwrite>
             <Required>True</Required>
         </DeployFile>
+        <DeployFile Include="Sons\fire_wing.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
+            <RemoteName>fire_wing.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Fonts\04B_19.TTF" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
+            <RemoteName>04B_19.TTF</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\armeabi\libnative-activity.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\library\lib\armeabi\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\library\lib\armeabi\</RemoteDir>
             <RemoteName>libFlappyBird.so</RemoteName>
             <DeployClass>AndroidLibnativeArmeabiFile</DeployClass>
             <Operation>1</Operation>
@@ -554,35 +554,17 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-large\</RemoteDir>
-            <RemoteName>splash_image.png</RemoteName>
-            <DeployClass>Android_SplashImage640</DeployClass>
+        <DeployFile Include="Imagens\monkey\flappymonkeyrocket144.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon144</DeployClass>
             <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-xlarge\</RemoteDir>
-            <RemoteName>splash_image.png</RemoteName>
-            <DeployClass>Android_SplashImage960</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Sons\sfx_wing.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
-            <RemoteName>sfx_wing.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\release\mips\libnative-activity.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\library\lib\mips\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\library\lib\mips\</RemoteDir>
             <RemoteName>libBirdsFlappy.so</RemoteName>
             <DeployClass>AndroidLibnativeMipsFile</DeployClass>
             <Operation>1</Operation>
@@ -590,17 +572,8 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Sons\sfx_point.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
-            <RemoteName>sfx_point.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmxblue96.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-xhdpi\</RemoteDir>
+        <DeployFile Include="Imagens\monkey\flappymonkeyrocket96.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-xhdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon96</DeployClass>
             <Operation>1</Operation>
@@ -609,7 +582,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android\Debug\classes.dex" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\classes\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\classes\</RemoteDir>
             <RemoteName>classes.dex</RemoteName>
             <DeployClass>AndroidClassesDexFile</DeployClass>
             <Operation>1</Operation>
@@ -618,7 +591,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Fonts\04B_19.TTF" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
             <RemoteName>04B_19.TTF</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
@@ -626,26 +599,8 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmx96.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-xhdpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon96</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmxblue36.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-ldpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon36</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="Android\Debug\styles.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\res\values\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\res\values\</RemoteDir>
             <RemoteName>styles.xml</RemoteName>
             <DeployClass>AndroidSplashStyles</DeployClass>
             <Operation>1</Operation>
@@ -653,8 +608,17 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Imagens\monkey\flappymonkeyrocket36.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-ldpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\release\armeabi\libnative-activity.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\library\lib\armeabi\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\library\lib\armeabi\</RemoteDir>
             <RemoteName>libBirdsFlappy.so</RemoteName>
             <DeployClass>AndroidLibnativeArmeabiFile</DeployClass>
             <Operation>1</Operation>
@@ -662,26 +626,35 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Sons\sfx_die.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
-            <RemoteName>sfx_die.mp3</RemoteName>
+        <DeployFile Include="Sons\fire_point.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
+            <RemoteName>fire_point.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Sons\sfx_wing.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
-            <RemoteName>sfx_wing.mp3</RemoteName>
+        <DeployFile Include="Sons\fire_die.mp3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
+            <RemoteName>fire_die.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Imagens\monkey\flappymonkeyrocket96.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon96</DeployClass>
+            <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\release\x86\libnative-activity.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\library\lib\x86\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\library\lib\x86\</RemoteDir>
             <RemoteName>libBirdsFlappy.so</RemoteName>
             <DeployClass>AndroidLibnativeX86File</DeployClass>
             <Operation>1</Operation>
@@ -689,17 +662,8 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-normal\</RemoteDir>
-            <RemoteName>splash_image.png</RemoteName>
-            <DeployClass>Android_SplashImage470</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="c:\program files (x86)\embarcadero\appmethod\13.0\lib\android\debug\classes.dex" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\classes\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\classes\</RemoteDir>
             <RemoteName>classes.dex</RemoteName>
             <DeployClass>AndroidClassesDexFile</DeployClass>
             <Operation>1</Operation>
@@ -707,8 +671,8 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmxblue72.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-hdpi\</RemoteDir>
+        <DeployFile Include="Imagens\monkey\flappymonkeyrocket72.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-hdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon72</DeployClass>
             <Operation>1</Operation>
@@ -716,8 +680,8 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\flappybirdfmxblue144.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-xxhdpi\</RemoteDir>
+        <DeployFile Include="Imagens\monkey\flappymonkeyrocket144.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-xxhdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon144</DeployClass>
             <Operation>1</Operation>
@@ -725,8 +689,26 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Imagens\splash_470.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\res\drawable-normal\</RemoteDir>
+        <DeployFile Include="Sons\fire_wing.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
+            <RemoteName>fire_wing.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Imagens\monkey\splash_426.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-small\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage426</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Imagens\monkey\splash_470.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FlappyMonkeyRocket\res\drawable-normal\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage470</DeployClass>
             <Operation>1</Operation>
@@ -734,8 +716,17 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Sons\fire_hit.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
+            <RemoteName>fire_hit.mp3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\x86\libnative-activity.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\library\lib\x86\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\library\lib\x86\</RemoteDir>
             <RemoteName>libFlappyBird.so</RemoteName>
             <DeployClass>AndroidLibnativeX86File</DeployClass>
             <Operation>1</Operation>
@@ -744,7 +735,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android\Release\AndroidManifest.xml" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket\</RemoteDir>
             <RemoteName>AndroidManifest.xml</RemoteName>
             <DeployClass>ProjectAndroidManifest</DeployClass>
             <Operation>1</Operation>
@@ -752,18 +743,9 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Sons\sfx_hit.mp3" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
-            <RemoteName>sfx_hit.mp3</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Sons\sfx_hit.mp3" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FlappyBirdFMX\assets\internal\</RemoteDir>
-            <RemoteName>sfx_hit.mp3</RemoteName>
+        <DeployFile Include="Sons\fire_die.mp3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FlappyMonkeyRocket\assets\internal\</RemoteDir>
+            <RemoteName>fire_die.mp3</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
@@ -773,7 +755,7 @@
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='iOSSimulator'">
         <DeployFile Include="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>libcgunwind.1.0.dylib</RemoteName>
             <DeployClass>DependencyModule</DeployClass>
             <Operation>1</Operation>
@@ -782,7 +764,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\Redist\iossimulator\libPCRE.dylib">
-            <RemoteDir>FlappyBirdFMX.app\</RemoteDir>
+            <RemoteDir>FlappyMonkeyRocket.app\</RemoteDir>
             <RemoteName>libPCRE.dylib</RemoteName>
             <DeployClass>DependencyModule</DeployClass>
             <Operation>1</Operation>

@@ -1,4 +1,4 @@
-program FlappyBirdFMX;
+program FlappyMonkeyRocket;
 
 uses
   System.StartUpCopy,

@@ -7,7 +7,7 @@ uses
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Objects, FMX.Ani, FMX.Effects, FMX.Platform,
-  FMX.Controls.Presentation, uConfig;
+  FMX.Controls.Presentation, uConfig, FMX.MultiView, FMX.Layouts, FMX.ListBox;
 
 type
   TMenuForm = class(TForm)
@@ -23,9 +23,22 @@ type
     FloatAnimation1: TFloatAnimation;
     swtchSom: TSwitch;
     lblPropaganda: TLabel;
+    layPrincipal: TLayout;
+    tlbControle: TToolBar;
+    btnMenu: TButton;
+    btnFechar: TButton;
+    MultiView: TMultiView;
+    pnlTop: TPanel;
+    pnlBottom: TPanel;
+    imgMonkey: TImage;
+    lstMenu: TListBox;
+    lstItem1: TListBoxItem;
+    lblTitulo: TLabel;
+    GlowEffect1: TGlowEffect;
     procedure PlayBTNClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure swtchSomSwitch(Sender: TObject);
+    procedure btnFecharClick(Sender: TObject);
   private
     { Private declarations }
 
@@ -44,10 +57,16 @@ implementation
 
 uses uGame, uDmStyle;
 
+procedure TMenuForm.btnFecharClick(Sender: TObject);
+begin
+  Self.Close;
+end;
+
 procedure TMenuForm.FormCreate(Sender: TObject);
 begin
 {$IFDEF MSWINDOWS}
   BorderStyle := TFmxFormBorderStyle.bsSizeable;
+  MultiView1.Visible  := False;
 {$ELSE}
   // BorderStyle:= TFmxFormBorderStyle.None; {BUG}
 

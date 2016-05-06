@@ -52,15 +52,15 @@ begin
     Exit;
 
   case FSom of
-    Wing: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim + 'sfx_wing.mp3';
-    Pointer: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim +  'sfx_point.mp3';
-    Swooshing: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim +  'sfx_swooshing.mp3';
-    Hit: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim +  'sfx_hit.mp3';
-    Die: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim +  'sfx_die.mp3';
+    Wing: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim + 'fire_wing.mp3';
+    Pointer: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim +  'fire_point.mp3';
+    Swooshing: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim +  'fire_swooshing.mp3';
+    Hit: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim +  'fire_hit.mp3';
+    Die: FMediaPlayer.FileName := TPath.GetDocumentsPath + PathDelim +  'fire_die.mp3';
   end;
 
   FMediaPlayer.Play;
-  Sleep(1000);
+  Sleep(1500);
 end;
 
 end.

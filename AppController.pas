@@ -139,7 +139,6 @@ begin
   TMusic.Create(TSom.Hit);
   StopGame;
   FGUI.GameOver(FData.GetScore, FData.GetHighscore);
-  TMusic.Create(TSom.Die);
 end;
 
 procedure TAppController.Tapped;

@@ -52,13 +52,13 @@ function TConfig.GetColorPoints(Points: Integer): TAlphaColor;
 begin
   Result  := TAlphaColorRec.Chocolate;
   if Points >= 50 then
-    Result  := TAlphaColorRec.White;
+    Result  := TAlphaColorRec.Chartreuse;
   if Points >= 100 then
     Result  := TAlphaColorRec.Yellow;
   if Points >= 200 then
     Result  := TAlphaColorRec.Blueviolet;
   if Points >= 400 then
-    Result  := TAlphaColorRec.Black;
+    Result  := TAlphaColorRec.Cornflowerblue;
 end;
 
 { TSingletonConfig }

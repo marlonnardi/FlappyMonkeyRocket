@@ -6,7 +6,7 @@
   
   * Compilado com Delphi 10 Seattle.
   
-  * Contribua com melhorias e manutenção criando pull requests (https://github.com/marlonnardi/FlappyBirdFMX/pulls) e issues (https://github.com/marlonnardi/FlappyBirdFMX/issues).
+  * Contribua com melhorias e manutenção criando pull requests (https://github.com/marlonnardi/FlappyMonkeyRocket/pulls) e issues (https://github.com/marlonnardi/FlappyMonkeyRocket/issues).
 
 ## Compilação
 

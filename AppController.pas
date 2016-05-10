@@ -90,31 +90,31 @@ begin
   FUpdater.Start;
   FTimer:= TTimer.Create(nil);
   FTimer.Interval:=33;
-  FTimer.Enabled:= false;
+  FTimer.Enabled:= False;
   FTimer.OnTimer:= MainLoop;
 end;
 
 procedure TAppController.StartGame;
 begin
- ResetGame;
- FUpdater.AddPipe := AddPipe;
- FTimer.Enabled := true;
- FUpdater.FActive := True;
+  ResetGame;
+  FUpdater.AddPipe := AddPipe;
+  FTimer.Enabled := true;
+  FUpdater.FActive := True;
 end;
 
 procedure TAppController.StopGame;
 begin
- FUpdater.FActive := False;
- // this causes crashes on Android sometimes so I made it a pool and it just re-uses the thread
- //FUpdater.Terminate;
- //FUpdater.WaitFor;
- //FUpdater.DisposeOf;
- FTimer.Enabled := False;
+  FUpdater.FActive := False;
+  // this causes crashes on Android sometimes so I made it a pool and it just re-uses the thread
+  //FUpdater.Terminate;
+  //FUpdater.WaitFor;
+  //FUpdater.DisposeOf;
+  FTimer.Enabled := False;
 end;
 
 procedure TAppController.Replay;
 begin
- ResetGame;
+  ResetGame;
 end;
 
 procedure TAppController.ResetGame;
@@ -342,6 +342,7 @@ var BirdUpCount: Integer;
     YOff,YMinOff,YMaxOff: Integer;
 begin
  inherited;
+  Self.NameThreadForDebugging('Calculator');
   BirdUpCount:= 0;
   IsBirdUp:= false;
   while not Terminated do

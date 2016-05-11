@@ -31,6 +31,7 @@ begin
   FMediaPlayer  := TMediaPlayer.Create(nil);
   { executada automaticamente após a instância ser criada }
   inherited Create(False);
+
   { limpa da memória após seu termino }
   Self.FreeOnTerminate := True;
 end;
@@ -48,6 +49,8 @@ end;
 procedure TMusic.Execute;
 begin
   inherited;
+  Self.NameThreadForDebugging('Music');
+
   if not(FSingletonConfig.SomLigado) then
     Exit;
 

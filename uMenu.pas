@@ -22,7 +22,7 @@ type
     FMonkeyA: TImage;
     FloatAnimation1: TFloatAnimation;
     swtchSom: TSwitch;
-    lblPropaganda: TLabel;
+    lblSom: TLabel;
     layPrincipal: TLayout;
     tlbControle: TToolBar;
     btnMenu: TButton;
@@ -66,7 +66,7 @@ procedure TMenuForm.FormCreate(Sender: TObject);
 begin
 {$IFDEF MSWINDOWS}
   BorderStyle := TFmxFormBorderStyle.bsSizeable;
-  MultiView1.Visible  := False;
+  MultiView1.Visible := False;
 {$ELSE}
   // BorderStyle:= TFmxFormBorderStyle.None; {BUG}
 

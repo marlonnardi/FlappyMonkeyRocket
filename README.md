@@ -19,10 +19,6 @@
 ![Jogo](Imagens/monkey/flappymonkeyrocket144.png)
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/marlonnardi/FlappyMonkeyRocket/master/Imagens/monkey/flappymonkeyrocket144.png"height="220px" style="margin: 0 auto;"/>
-</p>
-
-<p align="left">
   <img src="https://raw.githubusercontent.com/marlonnardi/FlappyMonkeyRocket/master/Imagens/monkey/Screenshot_20160506-161025.png"height="250px" style="margin: 0 auto;"/>
 </p>
 

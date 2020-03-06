@@ -16,6 +16,10 @@
 
 ## Screenshots
 
+<p align="left">
+  <img src="![Jogo]"height="220px" style="margin: 0 auto;"/>
+  </a>
+</p>
 ![Jogo](Imagens/monkey/flappymonkeyrocket144.png)
 ![Fases](Imagens/monkey/Screenshot_20160506-161025.png)
 ![Fases](Imagens/monkey/Screenshot_20160506-161036.png)

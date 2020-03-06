@@ -19,7 +19,7 @@
 
 ![Jogo]
 <p align="left">
-  <img src="Imagens/monkey/flappymonkeyrocket144.png"height="220px" style="margin: 0 auto;"/>
+  <img src="![Jogo](Imagens/monkey/flappymonkeyrocket144.png)"height="220px" style="margin: 0 auto;"/>
   </a>
 </p>
 ![Fases](Imagens/monkey/Screenshot_20160506-161025.png)

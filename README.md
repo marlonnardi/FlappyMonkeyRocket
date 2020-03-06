@@ -17,7 +17,7 @@
 ## Screenshots
 
 <p align="left">
-  <img src="![Jogo]"height="220px" style="margin: 0 auto;"/>
+  <img src=""height="220px" style="margin: 0 auto;"/>
   </a>
 </p>
 ![Jogo](Imagens/monkey/flappymonkeyrocket144.png)
